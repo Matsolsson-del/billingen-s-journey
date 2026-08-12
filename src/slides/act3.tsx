@@ -177,7 +177,7 @@ export function S16() {
           ))}
         </div>
       </div>
-      <p className="slide-body anim-fade d7 absolute bottom-28 left-20 opacity-60">
+      <p className="slide-body anim-fade d7 absolute bottom-40 left-20 opacity-60">
         Bergetgruppen – social inkludering i skötseln av berget.
       </p>
       <div className="anim-rise d8 absolute bottom-10 left-20">
