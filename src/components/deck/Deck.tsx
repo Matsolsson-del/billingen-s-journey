@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Grid3x3, Maximize2, StickyNote, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, Grid3x3, Maximize2, StickyNote, X } from "lucide-react";
 import { ScaledSlide } from "@/components/deck/ui";
 import { slides } from "@/slides";
 
