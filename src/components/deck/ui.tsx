@@ -106,22 +106,22 @@ export function Mark({ className }: { className?: string }) {
 export function ActTag({ act, name }: { act: string; name: string }) {
   return (
     <div className="anim-fade absolute top-20 left-20 flex items-center gap-5">
-      <span className="slide-badge text-bill-amber">{act}</span>
-      <span className="h-px w-16 bg-current opacity-30" />
-      <span className="slide-badge opacity-70">{name}</span>
+      <span className="slide-chrome text-bill-teal">{act}</span>
+      <span className="h-px w-16 bg-current opacity-25" />
+      <span className="slide-chrome opacity-60">{name}</span>
     </div>
   );
 }
 
 export function Rule({ className }: { className?: string }) {
-  return <div className={cn("anim-wipe d1 h-1 w-40 bg-bill-amber", className)} />;
+  return <div className={cn("anim-wipe d1 h-[3px] w-28 bg-bill-teal", className)} />;
 }
 
 export function Chip({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <span
       className={cn(
-        "slide-badge inline-flex items-center rounded-full border border-current/30 px-5 py-2 opacity-80",
+        "slide-caption inline-flex items-center rounded-full border border-current/25 px-6 py-2 opacity-80",
         className,
       )}
     >
@@ -129,3 +129,33 @@ export function Chip({ children, className }: { children: ReactNode; className?:
     </span>
   );
 }
+
+/** Caption under a photo tile. */
+export function Tile({
+  src,
+  alt,
+  label,
+  position = "center",
+  className,
+}: {
+  src: string;
+  alt: string;
+  label?: string;
+  position?: string;
+  className?: string;
+}) {
+  return (
+    <div className={cn("flex flex-col", className)}>
+      <div className="relative flex-1 overflow-hidden">
+        <img
+          src={src}
+          alt={alt}
+          className="absolute inset-0 h-full w-full object-cover"
+          style={{ objectPosition: position }}
+        />
+      </div>
+      {label ? <p className="slide-subtitle mt-6">{label}</p> : null}
+    </div>
+  );
+}
+
