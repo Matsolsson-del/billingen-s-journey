@@ -176,10 +176,10 @@ export function S16() {
             </p>
           ))}
         </div>
-        <p className="slide-body anim-fade d7 mt-6 opacity-60">
-          Bergetgruppen – social inkludering i skötseln av berget.
-        </p>
       </div>
+      <p className="slide-body anim-fade d7 absolute bottom-28 left-20 opacity-60">
+        Bergetgruppen – social inkludering i skötseln av berget.
+      </p>
       <div className="anim-rise d8 absolute bottom-10 left-20">
         <p className="slide-body-lg text-bill-green" style={{ fontWeight: 700 }}>
           NOMINERAD TILL ÅRETS HÅLLBARHETSKLIV 2026
