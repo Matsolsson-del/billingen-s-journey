@@ -198,9 +198,9 @@ export function S22() {
         {lessons.map((l, i) => (
           <div
             key={l}
-            className={`anim-rise d${i + 2} border-l border-white/25 px-8 py-10 first:border-l-0`}
+            className={`anim-rise d${i + 2} border-l border-white/25 px-6 py-10 first:border-l-0`}
           >
-            <p className="slide-title" style={{ fontSize: 58 }}>
+            <p className="slide-title" style={{ fontSize: 44 }}>
               {l}
             </p>
           </div>

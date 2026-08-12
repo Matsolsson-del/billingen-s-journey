@@ -14,7 +14,7 @@ export function S11() {
       <div className="absolute top-[330px] right-24 left-24 grid h-[480px] grid-cols-2 gap-14">
         <Tile
           className="anim-rise d2"
-          src={img.panorama}
+          src={img.modernBuilding}
           alt="Billingehus på berget"
           label="Ikonen på berget"
           position="center 45%"
@@ -57,7 +57,7 @@ export function S12() {
         </div>
         <div className="anim-rise d4 relative h-full overflow-hidden">
           <img
-            src={img.modernBuilding}
+            src={img.billingecenter}
             alt="Billingehus"
             className="absolute inset-0 h-full w-full object-cover"
           />
@@ -83,10 +83,10 @@ export function S13() {
       <ActTag {...A4} />
       <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center">
         <div className="anim-rise d2 flex h-[540px] w-[540px] items-center justify-center rounded-full bg-white/15">
-          <p className="slide-subtitle -translate-x-24">Besökare</p>
+          <p className="slide-subtitle -translate-x-44">Besökare</p>
         </div>
         <div className="anim-rise d3 -ml-[190px] flex h-[540px] w-[540px] items-center justify-center rounded-full bg-white/15">
-          <p className="slide-subtitle translate-x-24">Skövdebor</p>
+          <p className="slide-subtitle translate-x-44">Skövdebor</p>
         </div>
       </div>
       <p className="slide-title anim-fade d5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-bill-amber">
