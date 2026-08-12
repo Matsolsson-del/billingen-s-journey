@@ -2,6 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, Grid3x3, Maximize2, StickyNote, X } from "lucide-react";
 import { ScaledSlide } from "@/components/deck/ui";
 import { slides } from "@/slides";
+
+const at = (i: number) => slides[Math.max(0, Math.min(slides.length - 1, i))]!;
 import { cn } from "@/lib/utils";
 
 function useDeckState() {
@@ -17,11 +19,11 @@ function useDeckState() {
     const url = new URL(window.location.href);
     url.searchParams.set("slide", String(index + 1));
     window.history.replaceState(null, "", url.toString());
-    document.title = `${index + 1}/${slides.length} — ${slides[index].title} · Billingen`;
+    document.title = `${index + 1}/${slides.length} — ${at(index).title} · Billingen`;
   }, [index]);
 
   const next = useCallback(() => {
-    const s = slides[index];
+    const s = at(index);
     if (step < s.steps - 1) setStep((v) => v + 1);
     else if (index < slides.length - 1) {
       setIndex(index + 1);
@@ -34,7 +36,7 @@ function useDeckState() {
     else if (index > 0) {
       const i = index - 1;
       setIndex(i);
-      setStep(slides[i].steps - 1);
+      setStep(at(i).steps - 1);
     }
   }, [index, step]);
 
@@ -51,7 +53,7 @@ export function Deck() {
   const [grid, setGrid] = useState(false);
   const [notes, setNotes] = useState(false);
   const [idle, setIdle] = useState(false);
-  const slide = slides[index];
+  const slide = at(index);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
