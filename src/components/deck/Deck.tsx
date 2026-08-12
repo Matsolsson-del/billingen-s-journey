@@ -135,6 +135,7 @@ export function Deck() {
           <button
             onClick={() => window.open("/print", "_blank")}
             aria-label="Ladda ner som PDF"
+            title="Ladda ner som PDF"
             className="rounded-full bg-black/45 p-3 text-white backdrop-blur transition hover:bg-black/70"
           >
             <Download className="h-5 w-5" />
