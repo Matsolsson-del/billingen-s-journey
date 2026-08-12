@@ -91,7 +91,7 @@ export function S04() {
       <img src={img.logo} alt="Billingen Skövde" className="anim-fade absolute top-16 right-20 h-20 w-auto" />
       <div className="absolute right-0 bottom-0 left-0 bg-bill-green px-24 pt-16 pb-20">
         <p className="slide-kicker anim-fade text-white/70">Vision</p>
-        <p className="slide-title-lg anim-rise d2 mt-8 max-w-[1500px] text-white">
+        <p className="slide-title anim-rise d2 mt-8 max-w-[1400px] text-white">
           Södra och västra Sveriges bästa
           <br />
           outdoordestination året runt
