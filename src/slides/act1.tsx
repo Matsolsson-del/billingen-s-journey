@@ -39,7 +39,7 @@ export function S02() {
         <Photo src={img.arneMaja} alt="Arne och Maja Sandberg på Billingen omkring 1970" position="center 30%" />
         <div className="absolute inset-0 bg-gradient-to-r from-bill-green-deep via-transparent to-transparent" />
       </div>
-      <div className="slide-mega anim-fade d1 absolute bottom-[-40px] left-14 opacity-15" style={{ fontSize: 520 }}>
+      <div className="slide-mega anim-fade d1 absolute bottom-[-40px] left-14 opacity-15" style={{ fontSize: 260 }}>
         1970
       </div>
       <div className="absolute top-[320px] left-20 w-[900px]">
