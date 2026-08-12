@@ -250,10 +250,10 @@ export function S23({ step = 0 }: { step?: number }) {
           className="mt-20 transition-all duration-1000"
           style={{ opacity: step >= 1 ? 1 : 0, transform: step >= 1 ? "none" : "translateY(24px)" }}
         >
-          <p className="slide-title-lg max-w-[1500px]">
+          <p className="slide-title max-w-[1760px]">
             DESTINATIONER BYGGS INTE AV EN ENSKILD SATSNING.
           </p>
-          <p className="slide-title-lg mt-8 max-w-[1500px] text-bill-amber">
+          <p className="slide-title mt-8 max-w-[1760px] text-bill-amber">
             DE BYGGS NÄR MÅNGA BESLUT BÖRJAR PEKA ÅT SAMMA HÅLL.
           </p>
         </div>

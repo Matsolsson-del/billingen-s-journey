@@ -167,23 +167,20 @@ export function S16() {
         <Photo src={img.bergetgruppen} alt="Bergetgruppen arbetar på Billingen" position="center 50%" />
       </div>
       <div className="absolute top-[200px] left-20 w-[1100px]">
-        <h2 className="slide-title anim-rise d1">
-          HÅLLBARHET ÄR INTE ETT SIDOPROJEKT.
-          <br />
-          DET ÄR HUR VI UTVECKLAR PLATSEN.
-        </h2>
-        <div className="mt-14 grid grid-cols-2 gap-x-16 gap-y-10">
+        <h2 className="slide-title anim-rise d1">HÅLLBARHET ÄR INTE ETT SIDOPROJEKT.</h2>
+        <h2 className="slide-title anim-rise d2 mt-4">DET ÄR HUR VI UTVECKLAR PLATSEN.</h2>
+        <div className="mt-10 grid grid-cols-2 gap-x-16 gap-y-10">
           {dims.map((d, i) => (
             <p key={d} className={`slide-subtitle anim-rise d${i + 3} border-t border-bill-ink/20 pt-6`}>
               {d}
             </p>
           ))}
         </div>
-        <p className="slide-body anim-fade d7 mt-10 opacity-60">
-          Bergetgruppen – social inkludering i skötseln av berget.
-        </p>
       </div>
-      <div className="anim-rise d8 absolute bottom-16 left-20">
+      <p className="slide-body anim-fade d7 absolute bottom-40 left-20 opacity-60">
+        Bergetgruppen – social inkludering i skötseln av berget.
+      </p>
+      <div className="anim-rise d8 absolute bottom-10 left-20">
         <p className="slide-body-lg text-bill-green" style={{ fontWeight: 700 }}>
           NOMINERAD TILL ÅRETS HÅLLBARHETSKLIV 2026
         </p>
