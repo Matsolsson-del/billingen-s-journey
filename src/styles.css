@@ -142,3 +142,197 @@
     color: var(--color-foreground);
   }
 }
+
+/* ============================================================
+   BILLINGEN SKÖVDE — keynote design system
+   ============================================================ */
+
+@theme inline {
+  --color-bill-green: var(--bill-green);
+  --color-bill-green-deep: var(--bill-green-deep);
+  --color-bill-ink: var(--bill-ink);
+  --color-bill-sand: var(--bill-sand);
+  --color-bill-amber: var(--bill-amber);
+  --color-bill-mist: var(--bill-mist);
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
+}
+
+:root {
+  --bill-green: oklch(0.594 0.146 158.5);
+  --bill-green-deep: oklch(0.275 0.062 160);
+  --bill-ink: oklch(0.185 0.018 165);
+  --bill-sand: oklch(0.958 0.008 85);
+  --bill-amber: oklch(0.79 0.158 78);
+  --bill-mist: oklch(0.88 0.012 160);
+  --font-display-family:
+    "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-body-family: "Figtree", ui-sans-serif, system-ui, sans-serif;
+}
+
+.slide-content {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+  font-family: var(--font-body-family);
+
+  --slide-mega: 300px;
+  --slide-title-lg: 118px;
+  --slide-title: 88px;
+  --slide-subtitle: 52px;
+  --slide-body-lg: 40px;
+  --slide-body: 32px;
+  --slide-caption: 24px;
+  --slide-kicker: 22px;
+  --slide-chrome: 20px;
+}
+
+.slide-mega {
+  font-family: var(--font-display-family);
+  font-size: var(--slide-mega);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.slide-title-lg {
+  font-family: var(--font-display-family);
+  font-size: var(--slide-title-lg);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  font-weight: 700;
+}
+.slide-title {
+  font-family: var(--font-display-family);
+  font-size: var(--slide-title);
+  line-height: 1.02;
+  letter-spacing: -0.038em;
+  font-weight: 700;
+}
+.slide-subtitle {
+  font-size: var(--slide-subtitle);
+  line-height: 1.14;
+  letter-spacing: -0.022em;
+  font-weight: 300;
+}
+.slide-body-lg {
+  font-size: var(--slide-body-lg);
+  line-height: 1.24;
+  font-weight: 300;
+}
+.slide-body {
+  font-size: var(--slide-body);
+  line-height: 1.3;
+  font-weight: 300;
+}
+.slide-caption {
+  font-size: var(--slide-caption);
+  line-height: 1.3;
+  font-weight: 400;
+}
+.slide-kicker {
+  font-size: var(--slide-kicker);
+  line-height: 1.1;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.slide-chrome,
+.slide-badge {
+  font-size: var(--slide-chrome);
+  line-height: 1.15;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.slide-badge {
+  white-space: nowrap;
+}
+
+/* Entrance choreography ------------------------------------- */
+@keyframes bill-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes bill-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bill-wipe {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes bill-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.anim-rise {
+  animation: bill-rise 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-fade {
+  animation: bill-fade 1.2s ease both;
+}
+.anim-wipe {
+  transform-origin: left;
+  animation: bill-wipe 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.anim-zoom {
+  animation: bill-zoom 9s ease-out both;
+}
+
+.d1 {
+  animation-delay: 0.12s;
+}
+.d2 {
+  animation-delay: 0.26s;
+}
+.d3 {
+  animation-delay: 0.42s;
+}
+.d4 {
+  animation-delay: 0.58s;
+}
+.d5 {
+  animation-delay: 0.74s;
+}
+.d6 {
+  animation-delay: 0.9s;
+}
+.d7 {
+  animation-delay: 1.06s;
+}
+.d8 {
+  animation-delay: 1.22s;
+}
+
+@media print {
+  @page {
+    size: 1920px 1080px landscape;
+    margin: 0;
+  }
+  .print-slide {
+    page-break-after: always;
+    break-after: page;
+  }
+}
+
