@@ -81,15 +81,15 @@ export function S13() {
   return (
     <Slide tone="green">
       <ActTag {...A4} />
-      <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center">
-        <div className="anim-rise d2 flex h-[540px] w-[540px] items-center justify-center rounded-full bg-white/15">
-          <p className="slide-subtitle -translate-x-44">Besökare</p>
+      <div className="absolute top-[320px] left-1/2 flex -translate-x-1/2 items-center">
+        <div className="anim-rise d2 flex h-[460px] w-[460px] items-end justify-center rounded-full bg-white/15 pb-14">
+          <p className="slide-subtitle -translate-x-28">Besökare</p>
         </div>
-        <div className="anim-rise d3 -ml-[190px] flex h-[540px] w-[540px] items-center justify-center rounded-full bg-white/15">
-          <p className="slide-subtitle translate-x-44">Skövdebor</p>
+        <div className="anim-rise d3 -ml-[170px] flex h-[460px] w-[460px] items-end justify-center rounded-full bg-white/15 pb-14">
+          <p className="slide-subtitle translate-x-28">Skövdebor</p>
         </div>
       </div>
-      <p className="slide-title anim-fade d5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-bill-amber">
+      <p className="slide-title anim-fade d5 absolute top-[500px] left-1/2 -translate-x-1/2 text-center text-bill-mist">
         Attraktionskraft
       </p>
       <p className="slide-body anim-fade d7 absolute right-24 bottom-16 left-24 text-center opacity-75">
