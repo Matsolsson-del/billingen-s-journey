@@ -7,12 +7,13 @@ const at = (i: number) => slides[Math.max(0, Math.min(slides.length - 1, i))]!;
 import { cn } from "@/lib/utils";
 
 function useDeckState() {
-  const [index, setIndex] = useState(() => {
-    if (typeof window === "undefined") return 0;
-    const n = Number(new URLSearchParams(window.location.search).get("slide"));
-    return Number.isFinite(n) && n >= 1 && n <= slides.length ? n - 1 : 0;
-  });
+  const [index, setIndex] = useState(0);
   const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    const n = Number(new URLSearchParams(window.location.search).get("slide"));
+    if (Number.isFinite(n) && n >= 1 && n <= slides.length) setIndex(n - 1);
+  }, []);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
