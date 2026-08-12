@@ -179,7 +179,7 @@ export function Deck() {
         <div className="deck-grid absolute inset-0 z-40 overflow-y-auto bg-bill-ink/97 p-10">
           <div className="mb-8 flex items-center justify-between">
             <p className="text-sm font-semibold tracking-[0.2em] text-white/70 uppercase">
-              Översikt · 23 slides
+              Översikt · {slides.length} slides
             </p>
             <button
               onClick={() => setGrid(false)}

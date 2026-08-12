@@ -1,184 +1,160 @@
 import { img } from "@/lib/images";
-import { Slide, Photo, ActTag, Rule, Chip, Mark } from "@/components/deck/ui";
+import { Slide, Photo, ActTag, Rule, Chip } from "@/components/deck/ui";
 
-const ACT = { act: "Akt 3", name: "Ett system, inte en attraktion" };
+const A2 = { act: "Akt 2", name: "Modet" };
+const A3 = { act: "Akt 3", name: "Systemet" };
 
-/* SLIDE 7 — målgrupper */
-export function S07() {
-  const cards = [
-    { src: img.xcFamily, alt: "Familj på längdskidor", t: "BARNFAMILJEN", s: "Enkelt, tryggt, nära" },
-    { src: img.mtbForest, alt: "Mountainbike i skogen", t: "DEN AKTIVA", s: "Leder, backar, flow" },
-    { src: img.trailRun, alt: "Löpare på Billingen", t: "MOTIONÄREN", s: "Vardagsträning i naturen" },
-    { src: img.skiRace, alt: "Skidtävling på Billingen", t: "ELITEN", s: "Tävling och läger" },
-  ];
+/* 5 — 280 mkr, kommunen vågade */
+export function S05() {
+  const items = ["11 km konstsnöspår", "MTB-arena", "Billingebadet", "Billingecenter", "Arena Billingen", "Infrastruktur"];
   return (
     <Slide tone="ink">
-      <ActTag {...ACT} />
-      <h2 className="slide-title anim-rise d1 absolute top-[190px] left-20">
-        VI BYGGDE FÖR FLERA MÄNNISKOR SAMTIDIGT.
-      </h2>
-      <div className="absolute right-20 bottom-[120px] left-20 grid grid-cols-4 gap-8">
-        {cards.map((c, i) => (
-          <div
-            key={c.t}
-            className={`anim-rise d${i + 2} relative h-[560px] overflow-hidden rounded-sm`}
-          >
-            <Photo src={c.src} alt={c.alt} zoom={false} />
-            <div className="absolute inset-0 bg-gradient-to-t from-bill-ink via-bill-ink/20 to-transparent" />
-            <div className="absolute right-8 bottom-8 left-8">
-              <p className="slide-subtitle" style={{ fontSize: 40, fontWeight: 700 }}>
-                {c.t}
-              </p>
-              <p className="slide-caption mt-2 opacity-70">{c.s}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Slide>
-  );
-}
-
-/* SLIDE 8 — året runt */
-export function S08() {
-  const cols = [
-    { src: img.skiersTwo, alt: "Skidåkare i konstsnöspåret", t: "VINTER", s: "11 km konstsnö, belyst" },
-    { src: img.vandring, alt: "Vandring på Billingen", t: "VÅR", s: "Leder och utsikter" },
-    { src: img.pumptrack, alt: "Pumptrack", t: "SOMMAR", s: "Bad, cykel, evenemang" },
-    { src: img.utsikt, alt: "Utsikt över landskapet", t: "HÖST", s: "Löpning och lugn" },
-  ];
-  return (
-    <Slide tone="bare">
-      <div className="absolute inset-0 grid grid-cols-4">
-        {cols.map((c, i) => (
-          <div key={c.t} className={`anim-fade d${i + 1} relative overflow-hidden`}>
-            <Photo src={c.src} alt={c.alt} zoom={false} />
-            <div className="absolute inset-0 bg-gradient-to-t from-bill-ink via-bill-ink/25 to-bill-ink/40" />
-            <div className="absolute right-10 bottom-16 left-10">
-              <p className="slide-kicker text-bill-amber">{c.t}</p>
-              <p className="slide-body mt-4 opacity-85">{c.s}</p>
-            </div>
-            <div className="absolute inset-y-0 right-0 w-px bg-white/15" />
-          </div>
-        ))}
-      </div>
-      <div className="absolute top-[120px] right-20 left-20 text-center">
-        <h2 className="slide-title-lg anim-rise">SÄSONGEN SLUTADE ALDRIG.</h2>
-        <p className="slide-body-lg anim-rise d2 mx-auto mt-8 max-w-[1100px] opacity-80">
-          Året runt är inte en ambition. Det är en affärsmodell.
-        </p>
-      </div>
-    </Slide>
-  );
-}
-
-/* SLIDE 9 — barnen */
-export function S09() {
-  return (
-    <Slide tone="bare">
-      <Photo src={img.billingetrollet} alt="Barn möter Billingetrollet" position="center 35%" />
-      <div className="absolute inset-0 bg-gradient-to-r from-bill-ink/90 via-bill-ink/40 to-transparent" />
-      <ActTag {...ACT} />
-      <div className="absolute top-[330px] left-20 w-[900px]">
-        <h2 className="slide-title-lg anim-rise d1">BARNEN AVGÖR VAR FAMILJEN ÅKER.</h2>
+      <ActTag {...A2} />
+      <Photo src={img.pumptrack} alt="Pumptrack på Billingen" className="opacity-15" />
+      <div className="absolute inset-0 bg-bill-ink/75" />
+      <div className="absolute top-[230px] left-20 w-[880px]">
+        <h2 className="slide-title anim-rise d1">SKÖVDE KOMMUN VÅGADE INVESTERA LÅNGSIKTIGT.</h2>
         <Rule className="mt-10" />
-        <p className="slide-body-lg anim-rise d3 mt-10 max-w-[760px] opacity-85">
-          Billingetrollet, lekplatser, pulkabackar och enkla första äventyr. En destination som ett
-          barn vill återvända till blir en destination familjen bokar igen.
-        </p>
+        <p className="slide-mega anim-rise d3 mt-12">≈ 280</p>
+        <p className="slide-subtitle anim-rise d4 opacity-80">miljoner kronor</p>
+        <p className="slide-body anim-fade d6 mt-8 opacity-60">Billingeprojektet 2017–2024</p>
       </div>
-    </Slide>
-  );
-}
-
-/* SLIDE 10 — evenemang */
-export function S10() {
-  return (
-    <Slide tone="deep">
-      <ActTag {...ACT} />
-      <Mark />
-      <div className="absolute top-[210px] left-20 w-[780px]">
-        <h2 className="slide-title anim-rise d1">EVENEMANGEN GÖR PLATSEN KÄND.</h2>
-        <Rule className="mt-10" />
-        <p className="slide-body-lg anim-rise d3 mt-10 opacity-85">
-          Tävlingar, läger, festivaler och mästerskap fyller anläggningen – och sprider bilden av
-          Billingen långt utanför Skaraborg.
-        </p>
-        <div className="anim-rise d5 mt-14 flex flex-wrap gap-3">
-          <Chip>Skidtävlingar</Chip>
-          <Chip>MTB-lopp</Chip>
-          <Chip>Träningsläger</Chip>
-          <Chip>Konferens</Chip>
-          <Chip>Festival</Chip>
-        </div>
-      </div>
-      <div className="absolute top-[160px] right-20 flex w-[880px] flex-col gap-8">
-        <div className="anim-rise d2 relative h-[400px] overflow-hidden">
-          <Photo src={img.eventCrowd} alt="Publik vid evenemang på Billingen" zoom={false} />
-        </div>
-        <div className="anim-rise d4 relative h-[320px] overflow-hidden">
-          <Photo src={img.skiRace} alt="Skidtävling på Billingen" zoom={false} />
-        </div>
-      </div>
-    </Slide>
-  );
-}
-
-/* SLIDE 11 — boende */
-export function S11() {
-  const cards = [
-    { src: img.billingecenter, alt: "Billingecenter", t: "BILLINGECENTER", s: "Navet på berget" },
-    { src: img.stugby, alt: "Stugby och camping", t: "CAMPING & STUGBY", s: "Nära naturen" },
-    { src: img.hotelroom, alt: "Hotellrum", t: "HOTELL", s: "Möten och konferens" },
-  ];
-  return (
-    <Slide tone="sand">
-      <ActTag {...ACT} />
-      <h2 className="slide-title anim-rise d1 absolute top-[190px] left-20 max-w-[1300px]">
-        UTAN NÅGONSTANS ATT SOVA BLIR BESÖKET ETT DAGSBESÖK.
-      </h2>
-      <div className="absolute right-20 bottom-[150px] left-20 grid grid-cols-3 gap-10">
-        {cards.map((c, i) => (
-          <div key={c.t} className={`anim-rise d${i + 3}`}>
-            <div className="relative h-[520px] overflow-hidden">
-              <Photo src={c.src} alt={c.alt} zoom={false} />
-            </div>
-            <p className="slide-subtitle mt-6" style={{ fontSize: 36, fontWeight: 700 }}>
-              {c.t}
-            </p>
-            <p className="slide-body mt-2 opacity-65">{c.s}</p>
-          </div>
+      <div className="absolute top-[330px] right-20 flex w-[720px] flex-wrap gap-5">
+        {items.map((t, i) => (
+          <Chip key={t} className={`anim-rise d${i + 3} border-bill-amber/50`}>
+            {t}
+          </Chip>
         ))}
       </div>
-      <p className="slide-body anim-fade d7 absolute bottom-16 left-20 opacity-65">
-        Boendet förvandlar besök till gästnätter.
+      <p className="slide-body anim-fade d8 absolute right-20 bottom-16 opacity-55">
+        Därutöver bland annat ≈ 20 mkr i Billingebacken 2026
       </p>
     </Slide>
   );
 }
 
-/* SLIDE 12 — hållbarhet & inkludering */
-export function S12() {
+/* 6 — politiskt mod */
+export function S06() {
+  return (
+    <Slide tone="green">
+      <ActTag {...A2} />
+      <div className="absolute inset-y-0 right-0 w-[40%] opacity-30">
+        <Photo src={img.panorama} alt="Billingen från luften" zoom={false} />
+        <div className="absolute inset-0 bg-gradient-to-r from-bill-green to-transparent" />
+      </div>
+      <div className="absolute top-1/2 left-20 w-[1150px] -translate-y-1/2">
+        <p className="slide-kicker anim-fade text-bill-amber">En central lärdom</p>
+        <h2 className="slide-title-lg anim-rise d2 mt-8">LÅNGSIKTIGHET KRÄVER POLITISKT MOD.</h2>
+        <Rule className="mt-10" />
+        <p className="slide-body-lg anim-rise d4 mt-10 max-w-[950px] opacity-85">
+          Besluten fattas långt innan effekterna går att mäta.
+        </p>
+        <p className="slide-body anim-rise d6 mt-6 max-w-[950px] opacity-60">
+          Över flera mandatperioder, av olika politiska majoriteter.
+        </p>
+      </div>
+    </Slide>
+  );
+}
+
+/* 7 — kartan */
+export function S07() {
+  return (
+    <Slide tone="sand">
+      <ActTag {...A3} />
+      <div className="absolute inset-y-0 right-0 w-[54%] bg-white">
+        <img
+          src={img.karta}
+          alt="Översiktskarta över Billingen i Skövde"
+          className="anim-fade d2 absolute inset-0 h-full w-full object-contain p-16"
+        />
+      </div>
+      <div className="absolute top-1/2 left-20 w-[760px] -translate-y-1/2">
+        <h2 className="slide-title anim-rise d1">ETT SAMMANHÄNGANDE SYSTEM.</h2>
+        <Rule className="mt-10" />
+        <p className="slide-body-lg anim-rise d3 mt-10 opacity-70">
+          Boende, aktiviteter, bad, leder och arenor – tre kilometer från centrum.
+        </p>
+      </div>
+    </Slide>
+  );
+}
+
+/* 8 — för vem */
+export function S08() {
+  const who = ["Barnfamiljen", "Den aktiva", "Motionären", "Eliten"];
   return (
     <Slide tone="bare">
-      <div className="absolute inset-0 grid grid-cols-3">
-        <div className="anim-fade relative overflow-hidden">
-          <Photo src={img.bergetgruppen} alt="Bergetgruppen i arbete på Billingen" zoom={false} />
-        </div>
-        <div className="anim-fade d2 relative overflow-hidden">
-          <Photo src={img.vindskydd} alt="Vindskydd i skogen" zoom={false} />
-        </div>
-        <div className="anim-fade d3 relative overflow-hidden">
-          <Photo src={img.rainbow} alt="Regnbåge över Billingen" zoom={false} />
+      <Photo src={img.xcFamily} alt="Familj på skidor på Billingen" position="center 45%" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/75 to-bill-ink/10" />
+      <ActTag {...A3} />
+      <div className="absolute top-[300px] left-20 w-[950px]">
+        <h2 className="slide-title anim-rise d1">FÖR VEM BYGGER VI?</h2>
+        <Rule className="mt-10" />
+        <div className="mt-12 space-y-7">
+          {who.map((w, i) => (
+            <p key={w} className={`slide-subtitle anim-rise d${i + 3} opacity-90`}>
+              {w}
+            </p>
+          ))}
         </div>
       </div>
-      <div className="absolute inset-0 bg-bill-ink/72" />
-      <ActTag {...ACT} />
-      <div className="absolute top-[300px] left-20 w-[1150px]">
-        <h2 className="slide-title-lg anim-rise d1">EN DESTINATION FÖR ALLA.</h2>
+    </Slide>
+  );
+}
+
+/* 9 — året runt */
+export function S09() {
+  const seasons = [
+    { s: "VINTER", t: "Skidor, spår, backe" },
+    { s: "VÅR", t: "Löpning, vandring" },
+    { s: "SOMMAR", t: "Bad, cykel, läger" },
+    { s: "HÖST", t: "Leder, evenemang" },
+  ];
+  return (
+    <Slide tone="deep">
+      <ActTag {...A3} />
+      <h2 className="slide-title anim-rise d1 absolute top-[220px] left-20 max-w-[1300px]">
+        FRÅN VINTERBERG TILL ÅRET RUNT.
+      </h2>
+      <div className="absolute right-20 bottom-[230px] left-20 grid grid-cols-4 gap-px bg-white/15">
+        {seasons.map((x, i) => (
+          <div key={x.s} className={`anim-rise d${i + 3} bg-bill-green-deep px-10 py-14`}>
+            <p className="slide-kicker text-bill-amber">{x.s}</p>
+            <p className="slide-body-lg mt-6 opacity-85">{x.t}</p>
+          </div>
+        ))}
+      </div>
+      <p className="slide-title anim-rise d7 absolute bottom-16 left-20">
+        ÅRET RUNT ÄR EN AFFÄRSMODELL.
+      </p>
+    </Slide>
+  );
+}
+
+/* 10 — Vasaloppscenter */
+export function S10() {
+  return (
+    <Slide tone="bare">
+      <Photo src={img.skiClassic} alt="Längdskidåkning i konstsnöspåret på Billingen" position="center 40%" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/80 to-bill-ink/20" />
+      <ActTag {...A3} />
+      <div className="absolute top-[280px] left-20 w-[1050px]">
+        <h2 className="slide-title-lg anim-rise d1">
+          SÄLJ INTE SPÅRET.
+          <br />
+          SÄLJ MÅLET.
+        </h2>
         <Rule className="mt-10" />
-        <p className="slide-body-lg anim-rise d3 mt-10 max-w-[950px] opacity-85">
-          Tillgängliga leder, arbetsintegrerande skötsel, föreningsliv och öppna ytor. Hållbarhet
-          handlar lika mycket om vem som får plats som om hur vi bygger.
+        <div className="anim-rise d3 mt-10 flex flex-wrap gap-5">
+          {["Vasaloppscenter", "Längdskidor", "Cykling", "Löpning"].map((t) => (
+            <Chip key={t} className="border-bill-amber/60 text-bill-amber">
+              {t}
+            </Chip>
+          ))}
+        </div>
+        <p className="slide-body-lg anim-rise d5 mt-12 max-w-[900px] opacity-85">
+          Ingen köper elva kilometer konstsnöspår. Man köper resan mot sitt mål.
         </p>
       </div>
     </Slide>
