@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Grid3x3, Maximize2, StickyNote, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Download, Grid3x3, Maximize2, StickyNote, X } from "lucide-react";
 import { ScaledSlide } from "@/components/deck/ui";
 import { slides } from "@/slides";
 
@@ -98,7 +98,7 @@ export function Deck() {
       </ScaledSlide>
 
       {/* progress */}
-      <div className="absolute inset-x-0 top-0 z-20 h-[3px] bg-white/10">
+      <div className="deck-progress absolute inset-x-0 top-0 z-20 h-[3px] bg-white/10">
         <div
           className="h-full bg-bill-amber transition-all duration-500"
           style={{ width: `${((index + 1) / slides.length) * 100}%` }}
@@ -108,7 +108,7 @@ export function Deck() {
       {/* chrome */}
       <div
         className={cn(
-          "absolute inset-x-0 bottom-0 z-20 flex items-center justify-between px-8 py-6 transition-opacity duration-500",
+          "deck-chrome absolute inset-x-0 bottom-0 z-20 flex items-center justify-between px-8 py-6 transition-opacity duration-500",
           idle && !notes ? "opacity-0" : "opacity-100",
         )}
       >
@@ -132,6 +132,14 @@ export function Deck() {
           </span>
         </div>
         <div className="flex items-center gap-3">
+          <button
+            onClick={() => window.open("/print", "_blank")}
+            aria-label="Ladda ner som PDF"
+            title="Ladda ner som PDF"
+            className="rounded-full bg-black/45 p-3 text-white backdrop-blur transition hover:bg-black/70"
+          >
+            <Download className="h-5 w-5" />
+          </button>
           <button
             onClick={() => setNotes((v) => !v)}
             aria-label="Talarmanus"
@@ -158,7 +166,7 @@ export function Deck() {
 
       {/* notes */}
       {notes && (
-        <div className="absolute right-0 bottom-24 left-0 z-30 mx-8 rounded-lg bg-black/80 px-8 py-6 text-white backdrop-blur">
+        <div className="deck-notes absolute right-0 bottom-24 left-0 z-30 mx-8 rounded-lg bg-black/80 px-8 py-6 text-white backdrop-blur">
           <p className="text-xs font-semibold tracking-[0.2em] text-bill-amber uppercase">
             Talarmanus · {slide.title}
           </p>
@@ -168,7 +176,7 @@ export function Deck() {
 
       {/* grid overview */}
       {grid && (
-        <div className="absolute inset-0 z-40 overflow-y-auto bg-bill-ink/97 p-10">
+        <div className="deck-grid absolute inset-0 z-40 overflow-y-auto bg-bill-ink/97 p-10">
           <div className="mb-8 flex items-center justify-between">
             <p className="text-sm font-semibold tracking-[0.2em] text-white/70 uppercase">
               Översikt · 23 slides

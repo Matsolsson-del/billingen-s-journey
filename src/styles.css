@@ -325,14 +325,41 @@
   animation-delay: 1.22s;
 }
 
+.print-deck {
+  margin: 0;
+  padding: 0;
+}
+
+.print-slide {
+  position: relative;
+  overflow: hidden;
+  width: 1920px;
+  height: 1080px;
+}
+
+.screen-only {
+  display: block;
+}
+
 @media print {
   @page {
     size: 1920px 1080px landscape;
     margin: 0;
   }
-  .print-slide {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .print-slide-break {
     page-break-after: always;
     break-after: page;
+  }
+  .screen-only,
+  .deck-progress,
+  .deck-chrome,
+  .deck-notes,
+  .deck-grid {
+    display: none !important;
   }
 }
 
