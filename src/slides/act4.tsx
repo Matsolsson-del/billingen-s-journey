@@ -121,14 +121,14 @@ export function S19({ step = 0 }: { step?: number }) {
     <Slide tone="ink">
       <ActTag {...A6} />
       <div className="absolute top-1/2 right-20 left-20 -translate-y-1/2">
-        <div className="flex items-end justify-between">
+        <div className="flex items-end justify-between gap-16">
           {years.map((b, i) => (
             <div
               key={b.y}
               className="transition-all duration-700"
               style={{ opacity: step >= i ? 1 : 0.12 }}
             >
-              <p className="slide-mega" style={{ fontSize: 168 }}>
+              <p className="slide-mega" style={{ fontSize: 118, whiteSpace: "nowrap" }}>
                 {b.v}
               </p>
               <p className="slide-subtitle mt-4 opacity-55">{b.y}</p>
@@ -136,7 +136,7 @@ export function S19({ step = 0 }: { step?: number }) {
           ))}
         </div>
         <div
-          className="mt-24 border-t border-white/20 pt-12 transition-all duration-700"
+          className="mt-20 border-t border-white/20 pt-12 transition-all duration-700"
           style={{ opacity: step >= 3 ? 1 : 0 }}
         >
           <p className="slide-title-lg text-bill-amber">≈ +20 %</p>
