@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import { S01, S02, S03, S04, S04B, S05, S05B } from "./act1";
 import { S06, S07, S08, S09, S10 } from "./act2";
-import { S11, S12, S13, S14, S15, S15B } from "./act3";
+import { S11, S11B, S12, S13, S14, S15, S15B } from "./act3";
 import { S16, S17, S18, S19, S20, S21 } from "./act4";
 
 export type SlideDef = {
@@ -36,15 +36,16 @@ export const slides: SlideDef[] = [
   d(11, "Dubbla nyttan", "Akt 2", S09, "Det här är inte turism eller invånarnytta. Samma investering kan ge barnets fritid, föreningens arena, företagens attraktionskraft och besökarens upplevelse."),
   d(12, "Året runt", "Akt 2", S10, "Året runt är inte en slogan. Det är riskspridning, fler arbetstillfällen över året och bättre användning av samma infrastruktur."),
   d(13, "Kundresan", "Akt 3", S11, "Vi säljer inte elva kilometer konstsnö. Vi hjälper någon att klara sitt första Vasalopp. Det är skillnaden mellan att marknadsföra en anläggning och att utveckla en destination."),
-  d(14, "Billingehus", "Akt 3", S12, "Kommunens investering gjorde platsen starkare. Lotus tog över 2022, öppnade hotellet 2023 och utvecklade spa och kongresskapacitet. Offentligt och privat började dra åt samma håll."),
-  d(15, "Människorna", "Akt 3", S13, "Ingen logotyp bygger en destination. Lyft föreningarna, medarbetarna, företagen, politiken, kommunen, hotellet, Turistrådet och invånarna. Någon behöver hålla ihop helheten – men ingen äger framgången."),
-  d(16, "Västsverige", "Akt 3", S14, "Vänd dig till rummet. Samarbetet med Turistrådet har gett oss kompetens, räckvidd, kampanjer, pressresor och marknadsbearbetning som vi inte hade kunnat skapa lika starkt själva."),
-  d(17, "Evenemangen", "Akt 3", S15, "Evenemang är mer än tillfälliga gästnätter. De sätter en deadline, stresstestar infrastrukturen och ger en berättelse som når långt utanför kommunen. SM-veckan 2027 är nästa nivå."),
-  d(18, "Billingetrollet", "Akt 3", S15B, "Berätta om Billingetrollet – vår symbol. Billingetrollets skog, skogsteatern och skogsbion. Årets skogsteater sågs av 2 700 barn. En destination behöver också en berättelse som barn minns."),
-  d(19, "Hållbarheten", "Akt 4", S16, "Hållbarhet blir konkret när platsen fungerar för boende och besökare, fylls när den annars är tom och skapar robustare verksamheter. Billingen och Billingehus är Skaraborgs kandidat till Årets Hållbarhetskliv 2026."),
-  d(20, "Resultatet", "Akt 4", S17, "Klicka fram åren. 245 885 gästnätter 2025 är Skövdes starkaste notering hittills. Var noga: Billingen är en av flera motorer, inte ensam förklaring.", 4),
-  d(21, "Värdet", "Akt 4", S18, "Gästnätter är bara ett mått. Turismkonsumtionen ökade från 1,351 till 1,484 miljarder kronor. Men värdet syns också i stolthet, folkhälsa, föreningsliv och attraktivitet."),
-  d(22, "Inte färdiga", "Akt 4", S19, "Var öppna med nästa problem. Efterfrågan börjar ibland växa ur hotellkapaciteten, särskilt mitt i veckan. Destinationsutveckling blir aldrig färdig – varje framgång skapar nästa flaskhals."),
-  d(23, "Lärdomen", "Avslutning", S20, "Klicka fram sista meningen. Det började med två människors dröm. Det fortsatte genom hundratals beslut. Vårt ansvar är att lämna över något ännu bättre.", 2),
-  d(24, "Håll kontakt", "Outro", S21, "Avslutningsbild. Uppmana åhörarna att följa Billingen på Facebook och Instagram @Billingenskovde och besöka billingen.se för mer information."),
+  d(14, "Vändningen", "Akt 3", S11B, "Här kommer en vändning som ingen kunde planera. När investeringsbeslutet togs ägdes Billingehus av First Hotels och var en nedgången anläggning i skriande behov av renovering. Då köpte Lotus Group hotellet – utan tidigare koppling till Skövde – totalrenoverade det och byggde en kongresshall för 750 personer. Var ärlig: Billingen hade inte blivit en komplett destination om det slitna hotellet blivit kvar."),
+  d(15, "Billingehus", "Akt 3", S12, "Kommunens investering gjorde platsen starkare. Lotus tog över 2022, öppnade hotellet 2023 och utvecklade spa och kongresskapacitet. Offentligt och privat började dra åt samma håll."),
+  d(16, "Människorna", "Akt 3", S13, "Ingen logotyp bygger en destination. Lyft föreningarna, medarbetarna, företagen, politiken, kommunen, hotellet, Turistrådet och invånarna. Någon behöver hålla ihop helheten – men ingen äger framgången."),
+  d(17, "Västsverige", "Akt 3", S14, "Vänd dig till rummet. Samarbetet med Turistrådet har gett oss kompetens, räckvidd, kampanjer, pressresor och marknadsbearbetning som vi inte hade kunnat skapa lika starkt själva."),
+  d(18, "Evenemangen", "Akt 3", S15, "Evenemang är mer än tillfälliga gästnätter. De sätter en deadline, stresstestar infrastrukturen och ger en berättelse som når långt utanför kommunen. SM-veckan 2027 är nästa nivå."),
+  d(19, "Billingetrollet", "Akt 3", S15B, "Berätta om Billingetrollet – vår symbol. Billingetrollets skog, skogsteatern och skogsbion. Årets skogsteater sågs av 2 700 barn. En destination behöver också en berättelse som barn minns."),
+  d(20, "Hållbarheten", "Akt 4", S16, "Hållbarhet blir konkret när platsen fungerar för boende och besökare, fylls när den annars är tom och skapar robustare verksamheter. Billingen och Billingehus är Skaraborgs kandidat till Årets Hållbarhetskliv 2026."),
+  d(21, "Resultatet", "Akt 4", S17, "Klicka fram åren. 245 885 gästnätter 2025 är Skövdes starkaste notering hittills. Var noga: Billingen är en av flera motorer, inte ensam förklaring.", 4),
+  d(22, "Värdet", "Akt 4", S18, "Gästnätter är bara ett mått. Turismkonsumtionen ökade från 1,351 till 1,484 miljarder kronor. Men värdet syns också i stolthet, folkhälsa, föreningsliv och attraktivitet."),
+  d(23, "Inte färdiga", "Akt 4", S19, "Var öppna med nästa problem. Efterfrågan börjar ibland växa ur hotellkapaciteten, särskilt mitt i veckan. Destinationsutveckling blir aldrig färdig – varje framgång skapar nästa flaskhals."),
+  d(24, "Lärdomen", "Avslutning", S20, "Klicka fram sista meningen. Det började med två människors dröm. Det fortsatte genom hundratals beslut. Vårt ansvar är att lämna över något ännu bättre.", 2),
+  d(25, "Håll kontakt", "Outro", S21, "Avslutningsbild. Uppmana åhörarna att följa Billingen på Facebook och Instagram @Billingenskovde och besöka billingen.se för mer information."),
 ];
