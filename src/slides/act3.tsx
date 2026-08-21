@@ -101,14 +101,14 @@ export function S15() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Evenemangen" />
     <h2 className="slide-title anim-rise d1 absolute top-[140px] left-24">Evenemang är en utvecklingsmotor</h2>
-    <div className="absolute top-[300px] right-24 bottom-24 left-24 grid grid-cols-3 gap-12">
+    <div className="absolute top-[290px] right-24 bottom-[150px] left-24 grid grid-cols-3 gap-12">
       <Tile src={ev[0]!.src} alt={ev[0]!.alt} label={ev[0]!.t} className="anim-rise d2" />
       {/* Ingen rättighetsklar bild från Enduro-VM (motorcykelenduro) – typografisk yta i stället. */}
       <div className="anim-rise d3 flex flex-col">
         <div className="relative flex flex-1 flex-col justify-end bg-bill-green-deep p-10">
           <span className="absolute top-8 right-8 h-4 w-24 bg-bill-yellow" />
           <p className="slide-kicker text-bill-teal">FIM EnduroGP</p>
-          <p className="slide-title mt-4 leading-none">Enduro-<br />VM</p>
+          <p className="slide-title mt-4 leading-none whitespace-nowrap">Enduro-VM</p>
           <p className="slide-body mt-4 opacity-70">Motorcykelenduro i Skövde, 23–25 maj 2025</p>
         </div>
         <p className="slide-subtitle mt-6">Enduro-VM 2025</p>
