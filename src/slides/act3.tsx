@@ -74,7 +74,7 @@ export function S15B() {
       <h2 className="slide-title anim-rise d1 mt-10">En plats behöver också<br />en egen saga</h2>
       <p className="slide-body anim-fade d3 mt-10 opacity-70">Billingetrollets skog · skogsteater · skogsbio</p>
       <div className="anim-rise d5 mt-14 flex items-end gap-8">
-        <span className="slide-title-lg whitespace-nowrap text-bill-teal">2 700</span>
+        <span className="slide-title-lg text-bill-teal" style={{fontSize:"132px",lineHeight:1,whiteSpace:"nowrap"}}>2 700</span>
         <span className="slide-body mb-3 opacity-75">barn såg årets skogsteater</span>
       </div>
     </div>
