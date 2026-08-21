@@ -2,7 +2,7 @@ import arneMaja from "@/assets/arne-maja.jpg.asset.json";
 import billingehusBefore from "@/assets/billingehus-before.jpg.asset.json";
 import bergasalenNight from "@/assets/bergasalen-night.jpg.asset.json";
 import bergasalenKongress from "@/assets/bergasalen-kongress.jpg.asset.json";
-import elevationSpa from "@/assets/elevation-spa.jpg.asset.json";
+import elevationSpa from "@/assets/elevation-spa-infinity.jpg.asset.json";
 import bergetgruppen from "@/assets/bergetgruppen.jpg.asset.json";
 import billingecenter from "@/assets/billingecenter.jpg.asset.json";
 import logo from "@/assets/billingen-logo.png.asset.json";
