@@ -69,7 +69,7 @@ export function S11C({ step = 0 }: { step?: number }) {
     </div>
     <div className="absolute bottom-14 left-24 flex w-[1120px] items-baseline gap-12 border-t border-white/25 pt-6 text-white">
       {years.map((x) => (
-        <div key={x.y} className="flex items-baseline gap-4">
+        <div key={x.y} className="flex items-baseline gap-4 whitespace-nowrap">
           <span className="slide-caption text-bill-teal">{x.y}</span>
           <span className="slide-caption opacity-70">{x.t}</span>
         </div>
