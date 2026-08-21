@@ -51,7 +51,7 @@ export function S11C({ step = 0 }: { step?: number }) {
       className="absolute inset-y-0 right-0 w-[36%] overflow-hidden transition-all duration-700"
       style={{ opacity: step >= 1 ? 1 : 0, transform: step >= 1 ? "none" : "translateX(28px)" }}
     >
-      <Photo src={img.elevationSpa} alt="Utomhuspool med utsikt, Elevation Spa" position="center 50%" zoom={false} />
+      <Photo src={img.elevationSpa} alt="Infinitypool med utsikt över Skövde, Elevation Spa" position="34% 50%" zoom={false} />
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.35) 0%, rgba(4,26,24,.05) 40%, rgba(4,26,24,.45) 100%)" }} />
     </div>
     <ActTag act="Akt 3" name="Förvandlingen" />
