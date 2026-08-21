@@ -60,7 +60,7 @@ export function S11C({ step = 0 }: { step?: number }) {
     </div>
     <div className="absolute bottom-[190px] left-24 flex w-[1180px] items-end gap-20">
       {facts.map((f, i) => (
-        <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 1 ? 1 : 0.08, transform: step >= i + 1 ? "none" : "translateY(16px)" }}>
+        <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 2 ? 1 : 0.08, transform: step >= i + 2 ? "none" : "translateY(16px)" }}>
           <p className="slide-title text-white" style={{ whiteSpace: "nowrap" }}>{f.v}</p>
           <p className="slide-body mt-3 max-w-[300px] text-white opacity-80">{f.l}</p>
         </div>
