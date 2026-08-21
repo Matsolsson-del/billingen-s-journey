@@ -59,14 +59,15 @@ export function S11C({ step = 0 }: { step?: number }) {
       <h2 className="slide-title-lg anim-rise d1">Kongress. Spa.<br />Outdoor.</h2>
       <p className="slide-title anim-rise d3 mt-6 text-bill-yellow">På samma berg.</p>
     </div>
-    <div className="absolute bottom-[170px] left-24 flex w-[1120px] items-end gap-16 text-white">
+    <div className="absolute bottom-[170px] left-24 grid w-[1120px] grid-cols-3 items-start gap-12 text-white">
       {facts.map((f, i) => (
         <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 2 ? 1 : 0.1, transform: step >= i + 2 ? "none" : "translateY(16px)" }}>
-          <p className="slide-subtitle" style={{ whiteSpace: "nowrap", fontSize: 60, lineHeight: 1.05 }}>{f.v}</p>
+          <p className="slide-subtitle" style={{ whiteSpace: "nowrap", fontSize: 54, lineHeight: 1.05 }}>{f.v}</p>
           <p className="slide-body mt-3 max-w-[290px] opacity-75">{f.l}</p>
         </div>
       ))}
     </div>
+
     <div className="absolute bottom-14 left-24 flex w-[1120px] items-baseline gap-12 border-t border-white/25 pt-6 text-white">
       {years.map((x) => (
         <div key={x.y} className="flex items-baseline gap-4 whitespace-nowrap">
