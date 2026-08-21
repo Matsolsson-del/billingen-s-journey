@@ -80,7 +80,7 @@ export function S21() {
     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,30,31,0.86) 0%, rgba(14,30,31,0.55) 40%, rgba(14,30,31,0.22) 75%, rgba(14,30,31,0.10) 100%)" }} />
     <img src={img.logo} alt="Billingen Skövde" className="anim-fade absolute top-20 left-20 h-20 w-auto" />
     <div className="absolute top-1/2 right-24 left-24 -translate-y-1/2 text-center">
-      <p className="slide-kicker anim-fade text-bill-yellow">Följ med på resan</p>
+      <p className="slide-kicker anim-fade text-scrim text-bill-yellow">Följ med på resan</p>
       <h2 className="slide-title-lg anim-rise d2 mt-8">Håll kontakt med Billingen</h2>
       <div className="anim-rise d4 mt-16 flex items-center justify-center gap-16">
         <div className="flex flex-col gap-6">
