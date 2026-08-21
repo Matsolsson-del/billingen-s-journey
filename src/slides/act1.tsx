@@ -80,11 +80,11 @@ export function S05B() {
     <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
     {/* Täcker originalbildens egen rubrik så typografin följer presentationen */}
     <div
-      className="absolute top-0 left-0 h-[54%] w-[52%]"
+      className="absolute top-0 left-0 h-[62%] w-[58%]"
       style={{
-        background: "linear-gradient(to right, var(--bill-ink) 0%, var(--bill-ink) 52%, transparent 100%)",
-        maskImage: "linear-gradient(to bottom, #000 0%, #000 66%, transparent 100%)",
-        WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 66%, transparent 100%)",
+        background: "linear-gradient(to right, var(--bill-ink) 0%, var(--bill-ink) 66%, transparent 100%)",
+        maskImage: "linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%)",
       }}
     />
     <ActTag act="Akt 1" name="Läget" />
