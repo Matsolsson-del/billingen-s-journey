@@ -2,7 +2,7 @@ import type { ComponentType } from "react";
 import { S01, S02, S03, S04, S05, S05B } from "./act1";
 import { S06, S07, S08, S09, S10 } from "./act2";
 import { S11, S12, S13, S14, S15 } from "./act3";
-import { S16, S17, S18, S19, S20 } from "./act4";
+import { S16, S17, S18, S19, S20, S21 } from "./act4";
 
 export type SlideDef = {
   id: number;
@@ -43,5 +43,6 @@ export const slides: SlideDef[] = [
   d(18, "Resultatet", "Akt 4", S17, "Klicka fram åren. 245 885 gästnätter 2025 är Skövdes starkaste notering hittills. Var noga: Billingen är en av flera motorer, inte ensam förklaring.", 4),
   d(19, "Värdet", "Akt 4", S18, "Gästnätter är bara ett mått. Turismkonsumtionen ökade från 1,351 till 1,484 miljarder kronor. Men värdet syns också i stolthet, folkhälsa, föreningsliv och attraktivitet."),
   d(20, "Inte färdiga", "Akt 4", S19, "Var öppna med nästa problem. Efterfrågan börjar ibland växa ur hotellkapaciteten, särskilt mitt i veckan. Destinationsutveckling blir aldrig färdig – varje framgång skapar nästa flaskhals."),
-  d(21, "Lärdomen", "Avslutning", S20, "Klicka fram sista meningen. Det började med två människors dröm. Det fortsatte genom hundratals beslut. Vårt ansvar är att lämna över något ännu bättre. Tack.", 2),
+  d(21, "Lärdomen", "Avslutning", S20, "Klicka fram sista meningen. Det började med två människors dröm. Det fortsatte genom hundratals beslut. Vårt ansvar är att lämna över något ännu bättre.", 2),
+  d(22, "Håll kontakt", "Outro", S21, "Avslutningsbild. Uppmana åhörarna att följa Billingen på Facebook och Instagram @Billingenskovde och besöka billingen.se för mer information."),
 ];
