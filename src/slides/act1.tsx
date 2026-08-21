@@ -76,11 +76,11 @@ export function S04B() {
       <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
       <h2 className="slide-title-lg anim-rise d1 mt-8">Eldsjälarna blev<br />en gemensam röst</h2>
       <Rule className="mt-12" />
-      <div className="mt-14 flex items-center gap-6">
+      <div className="mt-14 flex items-start gap-8">
         {steps.map((t, i) => (
-          <div key={t} className={`anim-rise d${i + 2} flex items-center gap-6`}>
-            <p className="slide-body-lg max-w-[280px] leading-tight">{t}</p>
-            {i < steps.length - 1 && <span className="text-5xl text-bill-green">→</span>}
+          <div key={t} className={`anim-rise d${i + 2} flex items-start gap-8`}>
+            <p className="slide-body-lg w-[270px] leading-tight">{t}</p>
+            {i < steps.length - 1 && <span className="text-5xl leading-none text-bill-green">→</span>}
           </div>
         ))}
       </div>
