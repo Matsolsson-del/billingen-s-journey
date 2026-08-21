@@ -1,6 +1,8 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "./brand.css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -159,19 +161,8 @@
   --font-body: var(--font-body-family);
 }
 
-:root {
-  /* Billingen Skövde – turkos profilfärg (#058884) med ljusa profiltoner */
-  --bill-green: oklch(0.5664 0.0966 191.12);
-  --bill-green-deep: oklch(0.4772 0.0811 191.37);
-  --bill-ink: oklch(0.2133 0.0196 190.06);
-  --bill-sand: oklch(0.98 0.0069 174.38);
-  /* sekundär, ljus turkos – ersätter tidigare gul accent */
-  --bill-amber: oklch(0.8501 0.059 179.87);
-  --bill-teal: oklch(0.7603 0.0692 182.79);
-  --bill-mist: oklch(0.9181 0.0304 175.9);
-  --font-display-family: "Inter", ui-sans-serif, system-ui, Arial, sans-serif;
-  --font-body-family: "Inter", ui-sans-serif, system-ui, Arial, sans-serif;
-}
+/* Färg- och typografitokens definieras i src/brand.css (Skövdes visuella identitet). */
+
 
 .slide-content {
   width: 1920px;
