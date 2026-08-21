@@ -28,8 +28,9 @@ export function S07() {
     <div className="absolute top-[300px] right-24 bottom-[150px] left-24 grid grid-cols-3 gap-12">
       {moves.map((m, i) => <div key={m.from} className={`anim-rise d${i + 2} relative overflow-hidden`}>
         <img src={m.src} alt={`${m.from} blir ${m.to}`} className="photo-lift absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,30,31,0.94) 0%, rgba(14,30,31,0.72) 22%, rgba(14,30,31,0.18) 45%, rgba(14,30,31,0) 62%)" }} />
-        <div className="absolute right-10 bottom-10 left-10"><p className="slide-body opacity-90">{m.from}</p><p className="slide-subtitle mt-2 text-bill-yellow">→ {m.to}</p></div>
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,30,31,0.96) 0%, rgba(14,30,31,0.86) 26%, rgba(14,30,31,0.30) 50%, rgba(14,30,31,0) 66%)" }} />
+        <div className="absolute right-10 bottom-10 left-10"><p className="slide-body opacity-90">{m.from}</p><p className="slide-body-lg mt-2 font-semibold text-bill-yellow">→ {m.to}</p></div>
+
       </div>)}
     </div>
     <p className="slide-body-lg anim-fade d6 absolute bottom-[60px] left-24 opacity-95">Planerna förändrades. Ägare byttes. Förutsättningarna hann skifta. <span className="text-bill-teal">Men riktningen låg fast.</span></p>
