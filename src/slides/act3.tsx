@@ -17,7 +17,7 @@ export function S11() {
 export function S11B() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Vändningen" />
-    <div className="absolute inset-y-0 right-0 w-[52%]"><Photo src={img.hotelroom} alt="Totalrenoverade Billingehus" position="center 50%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/25 to-transparent" /></div>
+    <div className="absolute inset-y-0 right-0 w-[52%]"><Photo src={img.modernBuilding} alt="Billingehus efter totalrenoveringen" position="center 50%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/25 to-transparent" /></div>
     <div className="absolute top-1/2 left-24 w-[800px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Samtidigt, mitt i investeringsbeslutet</p>
       <h2 className="slide-title anim-rise d1 mt-8">Hotellet på berget var<br />slitet och till salu</h2>
@@ -35,8 +35,8 @@ export function S12() {
     <ActTag act="Akt 3" name="Följdinvesteringen" />
     <h2 className="slide-title anim-rise d1 absolute top-[140px] left-24">När platsen stärks vågar fler investera</h2>
     <div className="absolute top-[300px] right-24 left-24 grid h-[450px] grid-cols-2 gap-14">
-      <Tile src={img.modernBuilding} alt="Billingehus" label="2022 · Lotus tar över" className="anim-rise d2" />
-      <Tile src={img.billingecenter} alt="Billingecenter" label="2023–2025 · hotell, två spa och kongress" className="anim-rise d3" />
+      <Tile src={img.billingecenter} alt="Billingecenter" label="2022 · Lotus tar över" className="anim-rise d2" />
+      <Tile src={img.hotelroom} alt="Nya Billingehus" label="2023–2025 · hotell, två spa och kongress" className="anim-rise d3" />
     </div>
     <div className="absolute right-24 bottom-24 left-24 flex justify-between"><p className="slide-subtitle text-bill-green">Platsen stärker hotellet.</p><p className="slide-subtitle text-bill-green">Hotellet stärker platsen.</p></div>
   </Slide>;
