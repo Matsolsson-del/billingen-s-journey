@@ -74,3 +74,23 @@ export function S05() {
     </div>
   </Slide>;
 }
+
+export function S06() {
+  return <Slide tone="bare">
+    <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
+    {/* Täcker originalbildens egen rubrik så typografin följer presentationen */}
+    <div
+      className="absolute top-0 left-0 h-[54%] w-[52%]"
+      style={{
+        background: "linear-gradient(to right, var(--bill-ink) 0%, var(--bill-ink) 52%, transparent 100%)",
+        maskImage: "linear-gradient(to bottom, #000 0%, #000 66%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 66%, transparent 100%)",
+      }}
+    />
+    <ActTag act="Akt 1" name="Läget" />
+    <div className="absolute top-[210px] left-20 w-[820px]">
+      <h2 className="slide-title-lg anim-rise d1">Nära staden.<br /><span className="text-bill-teal">Nära marknaden.</span></h2>
+      <p className="slide-body anim-fade d4 mt-10 max-w-[620px] opacity-75">Natur, livskvalitet och tillgänglighet på samma plats.</p>
+    </div>
+  </Slide>;
+}
