@@ -59,7 +59,7 @@ export function S10() {
   return <Slide tone="sand">
     <ActTag act="Akt 2" name="Året runt" />
     <h2 className="slide-title anim-rise d1 absolute top-[145px] left-24">Året runt är en affärsmodell</h2>
-    <div className="absolute top-[300px] right-24 bottom-24 left-24 grid grid-cols-4 gap-8">
+    <div className="absolute top-[290px] right-24 bottom-[150px] left-24 grid grid-cols-4 gap-8">
       {seasons.map((x, i) => <Tile key={x.s} src={x.src} alt={x.alt} label={x.s} className={`anim-rise d${i + 2}`} />)}
     </div>
     <p className="slide-body absolute bottom-14 left-24 opacity-60">Jämnare efterfrågan · robustare verksamheter · bättre nyttjande</p>
