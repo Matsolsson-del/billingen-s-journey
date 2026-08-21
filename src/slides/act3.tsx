@@ -14,6 +14,22 @@ export function S11() {
   </Slide>;
 }
 
+export function S11B() {
+  return <Slide tone="ink">
+    <ActTag act="Akt 3" name="Vändningen" />
+    <div className="absolute inset-y-0 right-0 w-[52%]"><Photo src={img.modernBuilding} alt="Billingehus efter totalrenoveringen" position="center 50%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/25 to-transparent" /></div>
+    <div className="absolute top-1/2 left-24 w-[800px] -translate-y-1/2">
+      <p className="slide-kicker text-bill-yellow">Samtidigt, mitt i investeringsbeslutet</p>
+      <h2 className="slide-title anim-rise d1 mt-8">Hotellet på berget var<br />slitet och till salu</h2>
+      <p className="slide-body-lg anim-rise d3 mt-10 opacity-80">Då kom Lotus Group – utan tidigare koppling till Skövde – köpte Billingehus och totalrenoverade allt.</p>
+      <div className="anim-rise d5 mt-12 flex items-baseline gap-6">
+        <span className="text-bill-teal" style={{ fontSize: 150, fontWeight: 700, lineHeight: 1, whiteSpace: "nowrap" }}>750</span>
+        <span className="slide-body opacity-70">personer i en helt ny kongresshall</span>
+      </div>
+    </div>
+  </Slide>;
+}
+
 export function S12() {
   return <Slide tone="sand">
     <ActTag act="Akt 3" name="Följdinvesteringen" />
@@ -25,6 +41,7 @@ export function S12() {
     <div className="absolute right-24 bottom-24 left-24 flex justify-between"><p className="slide-subtitle text-bill-green">Platsen stärker hotellet.</p><p className="slide-subtitle text-bill-green">Hotellet stärker platsen.</p></div>
   </Slide>;
 }
+
 
 export function S13() {
   const actors = ["Politiken", "Skövde kommun", "Föreningslivet", "Näringslivet", "Billingehus", "Turistrådet", "Next Skövde", "Invånarna"];
