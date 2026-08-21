@@ -118,8 +118,13 @@ export function S05B() {
   return <Slide tone="bare">
     <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
     {/* Täcker originalbildens egen rubrik, men lämnar avståndsillustrationen nedtill fri */}
-    <div className="fade-r-ink absolute top-0 left-0 z-10 h-[720px] w-[44%]" />
-    <div className="fade-t-ink absolute top-0 right-0 left-0 z-10 h-[720px] rotate-180" style={{ transform: "none" }} />
+    <div
+      className="fade-r-ink absolute top-0 left-0 z-10 h-[780px] w-[46%]"
+      style={{
+        maskImage: "linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%)",
+      }}
+    />
     <ActTag act="Akt 1" name="Läget" />
     <div className="absolute top-[240px] left-20 z-20 w-[760px]">
       <h2 className="slide-title-lg anim-rise d1">Nära staden.<br /><span className="text-bill-teal">Nära marknaden.</span></h2>
