@@ -35,7 +35,7 @@ export function S12() {
     <ActTag act="Akt 3" name="Följdinvesteringen" />
     <h2 className="slide-title anim-rise d1 absolute top-[140px] left-24">När platsen stärks vågar fler investera</h2>
     <div className="absolute top-[300px] right-24 left-24 grid h-[450px] grid-cols-2 gap-14">
-      <Tile src={img.billingecenter} alt="Billingecenter" label="2022 · Lotus tar över" className="anim-rise d2" />
+      <Tile src={img.modernBuilding} alt="Billingehus" label="2022 · Lotus tar över" className="anim-rise d2" />
       <Tile src={img.hotelroom} alt="Nya Billingehus" label="2023–2025 · hotell, två spa och kongress" className="anim-rise d3" />
     </div>
     <div className="absolute right-24 bottom-24 left-24 flex justify-between"><p className="slide-subtitle text-bill-green">Platsen stärker hotellet.</p><p className="slide-subtitle text-bill-green">Hotellet stärker platsen.</p></div>
