@@ -14,34 +14,69 @@ export function S11() {
   </Slide>;
 }
 
-/** Billingehus: risken → vändpunkten → resultatet i en enda sekvens. */
+/** Risken: Billingehus före omvandlingen. */
 export function S11B() {
-  const beats = [
-    { y: "Före", t: "Ett slitet hotell", d: "Destinationens svagaste länk." },
-    { y: "2022", t: "Lotus Group tar över", d: "Såg potential där andra såg risk." },
-    { y: "2023–2025", t: "Hotell, spa och kongress", d: "Efter en omfattande omvandling." },
-  ];
   return <Slide tone="ink">
-    <ActTag act="Akt 3" name="Vändningen" />
-    <div className="absolute inset-y-0 right-0 overflow-hidden w-[42%]"><Photo src={img.modernBuilding} alt="Billingehus efter omvandlingen" position="center 50%" /><div className="fade-r-ink absolute inset-0" /></div>
-    <div className="absolute top-[210px] left-24 w-[1020px]">
-      <p className="slide-kicker text-bill-yellow">Mitt i investeringsbeslutet</p>
-      <h2 className="slide-title anim-rise d1 mt-8">Lotus såg potential<br />där andra såg risk</h2>
-      <div className="mt-12 space-y-6">
-        {beats.map((b, i) => (
-          <div key={b.y} className={`anim-rise d${i + 2} flex items-baseline gap-10 border-t border-white/15 pt-5`}>
-            <span className="slide-subtitle w-[240px] shrink-0 whitespace-nowrap text-bill-teal">{b.y}</span>
-            <div>
-              <p className="slide-body-lg">{b.t}</p>
-              <p className="slide-body opacity-60">{b.d}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-      <p className="slide-body-lg anim-fade d6 mt-10">Offentligt och privat började dra åt samma håll.</p>
+    <Photo src={img.billingehusBefore} alt="First Hotel Billingehus 2019, före omvandlingen" position="center 55%" zoom={false} />
+    <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(4,26,24,.94) 0%, rgba(4,26,24,.80) 42%, rgba(4,26,24,.35) 75%, rgba(4,26,24,.30) 100%)" }} />
+    <ActTag act="Akt 3" name="Risken" />
+    <div className="absolute top-1/2 left-24 w-[1000px] -translate-y-1/2">
+      <p className="slide-kicker text-bill-yellow">Billingehus 2019</p>
+      <h2 className="slide-title-lg anim-rise d1 mt-10">Här kunde resan<br />ha stannat.</h2>
+      <p className="slide-body-lg anim-fade d4 mt-14 opacity-85">Ett slitet hotell. En osäker framtid.</p>
+      <p className="slide-body-lg anim-fade d6 mt-4 opacity-85">Destinationens viktigaste svaga länk.</p>
+    </div>
+    <p className="slide-source absolute right-20 bottom-14 opacity-45">Foto: I99pema, Wikimedia Commons, CC BY-SA 4.0 (2019)</p>
+  </Slide>;
+}
+
+/** Förvandlingen: kongress, spa och outdoor på samma berg. */
+export function S11C({ step = 0 }: { step?: number }) {
+  const facts = [
+    { v: "Upp till 750", l: "kongressgäster i Bergasalen" },
+    { v: "235", l: "hotellrum" },
+    { v: "2 min", l: "till leder och konstsnöspår" },
+  ];
+  const years = [
+    { y: "2021–2022", t: "Lotus tar över" },
+    { y: "2023", t: "Billingehus återöppnar" },
+    { y: "2024–2025", t: "Spa och kongress färdigställs" },
+  ];
+  return <Slide tone="sand">
+    <div className="absolute inset-y-0 left-0 w-[64%] overflow-hidden">
+      <Photo src={img.bergasalenNight} alt="Bergasalen på Billingehus i kvällsljus" position="center 55%" zoom={false} />
+    </div>
+    <div
+      className="absolute right-0 bottom-0 w-[36%] overflow-hidden transition-all duration-700"
+      style={{ top: 0, opacity: step >= 1 ? 1 : 0, transform: step >= 1 ? "none" : "translateX(28px)" }}
+    >
+      <Photo src={img.elevationSpa} alt="Utomhuspool med utsikt, Elevation Spa" position="center 50%" zoom={false} />
+    </div>
+    <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.72) 0%, rgba(4,26,24,.22) 46%, rgba(4,26,24,.10) 100%)" }} />
+    <ActTag act="Akt 3" name="Förvandlingen" />
+    <div className="absolute top-[190px] left-24 w-[1180px] text-white">
+      <h2 className="slide-title-lg anim-rise d1">Kongress. Spa. Outdoor.</h2>
+      <p className="slide-title anim-rise d3 mt-4 text-bill-yellow">På samma berg.</p>
+    </div>
+    <div className="absolute bottom-[190px] left-24 flex w-[1180px] items-end gap-20">
+      {facts.map((f, i) => (
+        <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 1 ? 1 : 0.08, transform: step >= i + 1 ? "none" : "translateY(16px)" }}>
+          <p className="slide-title text-white" style={{ whiteSpace: "nowrap" }}>{f.v}</p>
+          <p className="slide-body mt-3 max-w-[300px] text-white opacity-80">{f.l}</p>
+        </div>
+      ))}
+    </div>
+    <div className="absolute bottom-14 left-24 flex w-[1180px] items-baseline gap-14 border-t border-white/25 pt-6">
+      {years.map((x) => (
+        <div key={x.y} className="flex items-baseline gap-4">
+          <span className="slide-caption text-bill-teal">{x.y}</span>
+          <span className="slide-caption text-white opacity-70">{x.t}</span>
+        </div>
+      ))}
     </div>
   </Slide>;
 }
+
 
 
 export function S13() {
