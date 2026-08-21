@@ -19,13 +19,12 @@ export function S11B() {
   const beats = [
     { y: "Före", t: "Ett slitet hotell", d: "Destinationens svagaste länk." },
     { y: "2022", t: "Lotus Group tar över", d: "Såg potential där andra såg risk." },
-    { y: "2023", t: "Hotellet öppnar igen", d: "Efter en omfattande omvandling." },
-    { y: "2025", t: "Spa och kongress", d: "Hotell, spa och kongresskapacitet på plats." },
+    { y: "2023–2025", t: "Hotell, spa och kongress", d: "Efter en omfattande omvandling." },
   ];
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Vändningen" />
     <div className="absolute inset-y-0 right-0 overflow-hidden w-[42%]"><Photo src={img.modernBuilding} alt="Billingehus efter omvandlingen" position="center 50%" /><div className="fade-r-ink absolute inset-0" /></div>
-    <div className="absolute top-[190px] left-24 w-[1020px]">
+    <div className="absolute top-[210px] left-24 w-[1020px]">
       <p className="slide-kicker text-bill-yellow">Mitt i investeringsbeslutet</p>
       <h2 className="slide-title anim-rise d1 mt-8">Lotus såg potential<br />där andra såg risk</h2>
       <div className="mt-12 space-y-6">
