@@ -6,6 +6,7 @@ import billingetrollet from "@/assets/billingetrollet.jpg.asset.json";
 import eventCrowd from "@/assets/event-crowd.jpg.asset.json";
 import heroSunset from "@/assets/hero-sunset.jpg.asset.json";
 import hotelroom from "@/assets/hotelroom.jpg.asset.json";
+import lotta from "@/assets/lotta-stigsdotter.jpg.asset.json";
 import modernBuilding from "@/assets/modern-building.jpg.asset.json";
 import mtbForest from "@/assets/mtb-forest.jpg.asset.json";
 import naraStaden from "@/assets/nara-staden.png.asset.json";
@@ -34,6 +35,7 @@ export const img = {
   eventCrowd: eventCrowd.url,
   heroSunset: heroSunset.url,
   hotelroom: hotelroom.url,
+  lotta: lotta.url,
   modernBuilding: modernBuilding.url,
   mtbForest: mtbForest.url,
   mtb: mtb.url,
