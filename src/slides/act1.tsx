@@ -64,6 +64,39 @@ export function S04() {
   </Slide>;
 }
 
+export function S04B() {
+  const steps = [
+    { n: "01", t: "Föreningarna samlades", d: "Lotta Stigsdotter kallade ihop klubbarna på berget." },
+    { n: "02", t: "En gemensam vision", d: "Många viljor formulerade en enda riktning för Billingen." },
+    { n: "03", t: "BFEF bildades", d: "Billingens fritidsområde ekonomisk förening blev en gemensam röst." },
+    { n: "04", t: "Kommunen sa ja", d: "Ett tålmodigt arbete som till slut ledde fram till investeringsbeslutet." },
+  ];
+  return <Slide tone="sand">
+    <ActTag act="Akt 1" name="Grunden" />
+    <div className="absolute inset-y-0 right-0 w-[40%]">
+      <Photo src={img.bergetgruppen} alt="Föreningsaktiva på Billingen" position="center 40%" />
+    </div>
+    <div className="absolute top-[170px] left-24 w-[1020px]">
+      <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
+      <h2 className="slide-title-lg anim-rise d1 mt-8">Grunden lades av<br />ideella krafter</h2>
+      <Rule className="mt-10" />
+      <div className="mt-10 space-y-7">
+        {steps.map((s, i) => (
+          <div key={s.n} className={`anim-rise d${i + 2} flex items-baseline gap-8`}>
+            <span className="slide-kicker text-bill-green" style={{ fontSize: 34 }}>{s.n}</span>
+            <div>
+              <p className="slide-body-lg">{s.t}</p>
+              <p className="slide-body mt-1 opacity-65">{s.d}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Slide>;
+}
+
+
+
 export function S05() {
   return <Slide tone="green">
     <ActTag act="Akt 1" name="Riktningen" />
