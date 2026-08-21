@@ -30,7 +30,7 @@ export function S11B() {
       <div className="mt-12 space-y-6">
         {beats.map((b, i) => (
           <div key={b.y} className={`anim-rise d${i + 2} flex items-baseline gap-10 border-t border-white/15 pt-5`}>
-            <span className="slide-subtitle w-[230px] shrink-0 text-bill-teal">{b.y}</span>
+            <span className="slide-subtitle w-[240px] shrink-0 whitespace-nowrap text-bill-teal">{b.y}</span>
             <div>
               <p className="slide-body-lg">{b.t}</p>
               <p className="slide-body opacity-60">{b.d}</p>
