@@ -73,9 +73,9 @@ export function S04B() {
   ];
   return <Slide tone="sand">
     <ActTag act="Akt 1" name="Grunden" />
-    <div className="absolute inset-y-0 right-0 w-[42%]">
+    <div className="absolute inset-y-0 right-0 w-[46%]">
       <Photo src={img.lotta} alt="Lotta Stigsdotter" position="center 20%" />
-      <div className="absolute inset-0 bg-gradient-to-r from-bill-sand via-bill-sand/40 to-transparent" />
+      <div className="fade-r-sand absolute inset-0" />
     </div>
     <div className="absolute top-[170px] left-24 w-[980px]">
       <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
