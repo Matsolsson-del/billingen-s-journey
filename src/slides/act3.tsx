@@ -46,7 +46,7 @@ export function S11B() {
 
 export function S13() {
   const actors = ["Politiken", "Skövde kommun", "Föreningslivet", "Näringslivet", "Billingehus", "Turistrådet", "Next Skövde", "Invånarna"];
-  const R = 330;
+  const R = 300;
   const C = 420;
   const pos = actors.map((t, i) => {
     const a = (i / actors.length) * Math.PI * 2 - Math.PI / 2;
@@ -55,7 +55,7 @@ export function S13() {
   return <Slide tone="deep">
     <ActTag act="Akt 3" name="Människorna" />
     <h2 className="slide-title anim-rise d1 absolute top-[120px] right-24 left-24 text-center">Ingen enskild aktör äger framgången</h2>
-    <div className="absolute top-[620px] left-1/2 h-[840px] w-[840px] -translate-x-1/2 -translate-y-1/2">
+    <div className="absolute top-[575px] left-1/2 h-[840px] w-[840px] -translate-x-1/2 -translate-y-1/2">
       <svg viewBox="0 0 840 840" className="anim-fade absolute inset-0 h-full w-full" aria-hidden="true">
         {pos.map((p, i) => (
           <g key={p.t}>
@@ -67,7 +67,7 @@ export function S13() {
       {pos.map((p, i) => (
         <div
           key={p.t}
-          className={`anim-fade d${Math.min(8, i + 1)} absolute flex h-[150px] w-[300px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-bill-green-deep px-6 text-center ring-2 ring-white/25`}
+          className={`anim-fade d${Math.min(8, i + 1)} absolute flex h-[130px] w-[290px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-bill-green-deep px-6 text-center ring-2 ring-white/25`}
           style={{ left: p.x, top: p.y }}
         >
           <span className="slide-body-lg leading-tight">{p.t}</span>
