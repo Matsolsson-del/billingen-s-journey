@@ -9,7 +9,7 @@ export function S01() {
     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,30,31,0.90) 0%, rgba(14,30,31,0.62) 26%, rgba(14,30,31,0.18) 52%, rgba(14,30,31,0.04) 75%, rgba(14,30,31,0) 100%)" }} />
     <img src={img.logo} alt="Billingen Skövde" className="anim-fade absolute top-20 left-20 h-24 w-auto drop-shadow-[0_2px_18px_rgba(6,20,20,0.7)]" />
     <div className="absolute right-24 bottom-28 left-24">
-      <h1 className="slide-mega anim-rise d1 text-scrim" style={{ fontSize: 184 }}>Hur bygger man<br />en destination?</h1>
+      <h1 className="slide-mega anim-rise d1 text-scrim" style={{ fontSize: 132 }}>Från ett kommunalt<br />friluftsområde till en destination.</h1>
       <div className="anim-rise d4 mt-14 flex items-end justify-between">
         <p className="slide-subtitle text-scrim text-bill-yellow">Billingen · en utvecklingsresa</p>
         <p className="slide-body text-scrim text-right opacity-85">Mats Olsson<br />Next Skövde</p>
