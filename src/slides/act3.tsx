@@ -18,7 +18,7 @@ export function S11B() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Vändningen" />
     <div className="absolute inset-y-0 right-0 w-[52%]"><Photo src={img.hotelroom} alt="Totalrenoverade Billingehus" position="center 50%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/25 to-transparent" /></div>
-    <div className="absolute top-1/2 left-24 w-[900px] -translate-y-1/2">
+    <div className="absolute top-1/2 left-24 w-[800px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Samtidigt, mitt i investeringsbeslutet</p>
       <h2 className="slide-title anim-rise d1 mt-8">Hotellet på berget var<br />slitet och till salu</h2>
       <p className="slide-body-lg anim-rise d3 mt-10 opacity-80">Då kom Lotus Group – utan tidigare koppling till Skövde – köpte Billingehus och totalrenoverade allt.</p>
