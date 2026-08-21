@@ -4,7 +4,7 @@ import { Slide, Photo, ActTag, Tile } from "@/components/deck/ui";
 export function S11() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Produkten" />
-    <div className="absolute inset-y-0 right-0 w-1/2"><Photo src={img.skiRace} alt="Längdskidåkning på Billingen" position="center 48%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/20 to-transparent" /></div>
+    <div className="absolute inset-y-0 right-0 w-[56%]"><Photo src={img.skiRace} alt="Längdskidåkning på Billingen" position="center 48%" /><div className="fade-r-ink absolute inset-0" /></div>
     <div className="absolute top-1/2 left-24 w-[900px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Officiellt Vasaloppscenter</p>
       <h2 className="slide-title-lg anim-rise d1 mt-10">Sälj inte elva<br />kilometer spår.</h2>
@@ -17,7 +17,7 @@ export function S11() {
 export function S11B() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Vändningen" />
-    <div className="absolute inset-y-0 right-0 w-[52%]"><Photo src={img.modernBuilding} alt="Billingehus efter totalrenoveringen" position="center 50%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/25 to-transparent" /></div>
+    <div className="absolute inset-y-0 right-0 w-[58%]"><Photo src={img.modernBuilding} alt="Billingehus efter totalrenoveringen" position="center 50%" /><div className="fade-r-ink absolute inset-0" /></div>
     <div className="absolute top-1/2 left-24 w-[800px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Samtidigt, mitt i investeringsbeslutet</p>
       <h2 className="slide-title anim-rise d1 mt-8">Hotellet på berget var<br />slitet och till salu</h2>
@@ -85,7 +85,7 @@ export function S15() {
 export function S15B() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Berättelsen" />
-    <div className="absolute inset-y-0 right-0 w-[52%]"><Photo src={img.billingetrollet} alt="Billingetrollet" position="center 40%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/25 to-transparent" /></div>
+    <div className="absolute inset-y-0 right-0 w-[58%]"><Photo src={img.billingetrollet} alt="Billingetrollet" position="center 40%" /><div className="fade-r-ink absolute inset-0" /></div>
     <div className="absolute top-1/2 left-24 w-[860px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Billingetrollet</p>
       <h2 className="slide-title anim-rise d1 mt-10">En plats behöver också<br />en egen saga</h2>
