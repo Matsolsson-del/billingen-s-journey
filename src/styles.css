@@ -361,37 +361,14 @@
 
 /* Mjuka övertoningar utan grå söm: alfa-slut i samma kulör som starten. */
 .fade-r-ink {
-  background-image: linear-gradient(
-    to right,
-    var(--bill-ink) 0%,
-    var(--bill-ink) 30%,
-    color-mix(in srgb, var(--bill-ink), transparent 55%) 62%,
-    color-mix(in srgb, var(--bill-ink), transparent 100%) 100%
-  );
+  background-image: linear-gradient(to right, rgba(14,30,31,1) 0%, rgba(14,30,31,1) 30%, rgba(14,30,31,0.45) 62%, rgba(14,30,31,0) 100%);
 }
 .fade-r-deep {
-  background-image: linear-gradient(
-    to right,
-    var(--bill-green-deep) 0%,
-    var(--bill-green-deep) 30%,
-    color-mix(in srgb, var(--bill-green-deep), transparent 55%) 62%,
-    color-mix(in srgb, var(--bill-green-deep), transparent 100%) 100%
-  );
+  background-image: linear-gradient(to right, rgba(0,88,84,1) 0%, rgba(0,88,84,1) 30%, rgba(0,88,84,0.45) 62%, rgba(0,88,84,0) 100%);
 }
 .fade-r-sand {
-  background-image: linear-gradient(
-    to right,
-    var(--bill-sand) 0%,
-    var(--bill-sand) 26%,
-    color-mix(in srgb, var(--bill-sand), transparent 55%) 60%,
-    color-mix(in srgb, var(--bill-sand), transparent 100%) 100%
-  );
+  background-image: linear-gradient(to right, rgba(251,248,243,1) 0%, rgba(251,248,243,1) 26%, rgba(251,248,243,0.45) 60%, rgba(251,248,243,0) 100%);
 }
 .fade-t-ink {
-  background-image: linear-gradient(
-    to top,
-    color-mix(in srgb, var(--bill-ink), transparent 8%) 0%,
-    color-mix(in srgb, var(--bill-ink), transparent 55%) 45%,
-    color-mix(in srgb, var(--bill-ink), transparent 100%) 100%
-  );
+  background-image: linear-gradient(to top, rgba(14,30,31,0.92) 0%, rgba(14,30,31,0.45) 45%, rgba(14,30,31,0) 100%);
 }
