@@ -5,7 +5,7 @@ export function S16() {
   const p=["Minsta möjliga onödiga miljöpåverkan","Bra för boende och besökare","Fler besökare när det finns plats","Robustare verksamheter och fler heltidsjobb"];
   return <Slide tone="sand">
     <ActTag act="Akt 4" name="Hållbarhetsklivet" />
-    <div className="absolute inset-y-0 right-0 w-[39%]"><Photo src={img.bergetgruppen} alt="Bergetgruppen arbetar på Billingen" position="center 50%" /></div>
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[39%]"><Photo src={img.bergetgruppen} alt="Bergetgruppen arbetar på Billingen" position="center 50%" /></div>
     <div className="absolute top-[170px] left-24 w-[1050px]">
       <p className="slide-kicker text-bill-green">Skaraborgs kandidat 2026</p>
       <h2 className="slide-title anim-rise d1 mt-8">Hållbarhet måste<br />märkas i vardagen</h2>

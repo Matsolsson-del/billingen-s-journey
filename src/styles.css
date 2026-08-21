@@ -358,3 +358,17 @@
   }
 }
 
+
+/* Mjuka övertoningar utan grå söm: alfa-slut i samma kulör som starten. */
+.fade-r-ink {
+  background-image: linear-gradient(to right, rgba(14,30,31,1) 0%, rgba(14,30,31,1) 30%, rgba(14,30,31,0.45) 62%, rgba(14,30,31,0) 100%);
+}
+.fade-r-deep {
+  background-image: linear-gradient(to right, rgba(0,88,84,1) 0%, rgba(0,88,84,1) 30%, rgba(0,88,84,0.45) 62%, rgba(0,88,84,0) 100%);
+}
+.fade-r-sand {
+  background-image: linear-gradient(to right, rgba(251,248,243,1) 0%, rgba(251,248,243,1) 26%, rgba(251,248,243,0.45) 60%, rgba(251,248,243,0) 100%);
+}
+.fade-t-ink {
+  background-image: linear-gradient(to top, rgba(14,30,31,0.92) 0%, rgba(14,30,31,0.45) 45%, rgba(14,30,31,0) 100%);
+}

@@ -21,9 +21,9 @@ export function S01() {
 export function S02() {
   return <Slide tone="deep">
     <ActTag {...A1} />
-    <div className="absolute inset-y-0 right-0 w-[46%]">
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[52%]">
       <Photo src={img.arneMaja} alt="Arne och Maja Sandberg" position="center 28%" />
-      <div className="absolute inset-0 bg-gradient-to-r from-bill-green-deep via-bill-green-deep/20 to-transparent" />
+      <div className="fade-r-deep absolute inset-0" />
     </div>
     <div className="absolute top-1/2 left-24 w-[900px] -translate-y-1/2">
       <p className="slide-mega anim-rise d1 text-bill-yellow" style={{ fontSize: 176 }}>1967</p>
@@ -73,9 +73,9 @@ export function S04B() {
   ];
   return <Slide tone="sand">
     <ActTag act="Akt 1" name="Grunden" />
-    <div className="absolute inset-y-0 right-0 w-[42%]">
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[46%]">
       <Photo src={img.lotta} alt="Lotta Stigsdotter" position="center 20%" />
-      <div className="absolute inset-0 bg-gradient-to-r from-bill-sand via-bill-sand/40 to-transparent" />
+      <div className="fade-r-sand absolute inset-0" />
     </div>
     <div className="absolute top-[170px] left-24 w-[980px]">
       <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
@@ -93,7 +93,7 @@ export function S04B() {
         ))}
       </div>
     </div>
-    <div className="anim-fade d6 absolute inset-y-0 right-0 z-10 w-[42%] bg-gradient-to-t from-bill-ink/85 via-bill-ink/25 to-transparent" />
+    <div className="fade-t-ink anim-fade d6 absolute right-0 bottom-0 z-10 h-[380px] w-[40%]" />
     <div className="anim-fade d6 absolute bottom-20 right-20 z-20 text-right text-white">
       <p className="slide-body-lg font-semibold">Lotta Stigsdotter</p>
       <p className="slide-body opacity-75">Samlande kraft bakom BFEF</p>
@@ -117,19 +117,18 @@ export function S05() {
 export function S05B() {
   return <Slide tone="bare">
     <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
-    {/* Täcker originalbildens egen rubrik så typografin följer presentationen */}
+    {/* Täcker originalbildens egen rubrik, men lämnar avståndsillustrationen nedtill fri */}
     <div
-      className="absolute inset-y-0 left-0 z-10 w-[46%]"
+      className="fade-r-ink absolute top-0 left-0 z-10 h-[780px] w-[46%]"
       style={{
-        background:
-          "linear-gradient(to right, var(--bill-ink) 0%, var(--bill-ink) 72%, color-mix(in oklab, var(--bill-ink) 0%, transparent) 100%)",
+        maskImage: "linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%)",
       }}
     />
     <ActTag act="Akt 1" name="Läget" />
-    <div className="absolute top-[300px] left-20 z-20 w-[760px]">
+    <div className="absolute top-[240px] left-20 z-20 w-[760px]">
       <h2 className="slide-title-lg anim-rise d1">Nära staden.<br /><span className="text-bill-teal">Nära marknaden.</span></h2>
       <p className="slide-body anim-fade d4 mt-10 max-w-[600px] opacity-75">Natur, livskvalitet och tillgänglighet på samma plats.</p>
     </div>
-
   </Slide>;
 }
