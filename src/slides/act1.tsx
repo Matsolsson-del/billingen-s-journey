@@ -73,10 +73,11 @@ export function S04B() {
   ];
   return <Slide tone="sand">
     <ActTag act="Akt 1" name="Grunden" />
-    <div className="absolute inset-y-0 right-0 w-[40%]">
-      <Photo src={img.vindskydd} alt="Vindskydd på Billingen byggt av föreningskrafter" position="center 50%" />
+    <div className="absolute inset-y-0 right-0 w-[42%]">
+      <Photo src={img.lotta} alt="Lotta Stigsdotter" position="center 20%" />
+      <div className="absolute inset-0 bg-gradient-to-r from-bill-sand via-bill-sand/40 to-transparent" />
     </div>
-    <div className="absolute top-[170px] left-24 w-[1020px]">
+    <div className="absolute top-[170px] left-24 w-[980px]">
       <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
       <h2 className="slide-title-lg anim-rise d1 mt-8">Grunden lades av<br />ideella krafter</h2>
       <Rule className="mt-10" />
@@ -91,6 +92,10 @@ export function S04B() {
           </div>
         ))}
       </div>
+    </div>
+    <div className="anim-fade d6 absolute bottom-20 right-20 z-10 text-right">
+      <p className="slide-body-lg font-semibold text-bill-ink">Lotta Stigsdotter</p>
+      <p className="slide-body opacity-60">Samlande kraft bakom BFEF</p>
     </div>
   </Slide>;
 }
