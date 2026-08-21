@@ -65,38 +65,30 @@ export function S04() {
 }
 
 export function S04B() {
-  const steps = [
-    { n: "01", t: "Föreningarna samlades", d: "Lotta Stigsdotter kallade ihop klubbarna på berget." },
-    { n: "02", t: "En gemensam vision", d: "Många viljor formulerade en enda riktning för Billingen." },
-    { n: "03", t: "BFEF bildades", d: "Billingens fritidsområde ekonomisk förening blev en gemensam röst." },
-    { n: "04", t: "Kommunen sa ja", d: "Ett tålmodigt arbete som till slut ledde fram till investeringsbeslutet." },
-  ];
+  const steps = ["Föreningarna samlades", "En gemensam vision", "Kommunen kunde fatta beslut"];
   return <Slide tone="sand">
     <ActTag act="Akt 1" name="Grunden" />
-    <div className="absolute inset-y-0 right-0 overflow-hidden w-[46%]">
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[42%]">
       <Photo src={img.lotta} alt="Lotta Stigsdotter" position="center 20%" />
       <div className="fade-r-sand absolute inset-0" />
     </div>
-    <div className="absolute top-[170px] left-24 w-[980px]">
+    <div className="absolute top-[250px] left-24 w-[1010px]">
       <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
-      <h2 className="slide-title-lg anim-rise d1 mt-8">Grunden lades av<br />ideella krafter</h2>
-      <Rule className="mt-10" />
-      <div className="mt-10 space-y-7">
-        {steps.map((s, i) => (
-          <div key={s.n} className={`anim-rise d${i + 2} flex items-baseline gap-8`}>
-            <span className="slide-kicker text-bill-green" style={{ fontSize: 34 }}>{s.n}</span>
-            <div>
-              <p className="slide-body-lg">{s.t}</p>
-              <p className="slide-body mt-1 opacity-65">{s.d}</p>
-            </div>
+      <h2 className="slide-title-lg anim-rise d1 mt-8">Eldsjälarna blev<br />en gemensam röst</h2>
+      <Rule className="mt-12" />
+      <div className="mt-14 flex items-center gap-6">
+        {steps.map((t, i) => (
+          <div key={t} className={`anim-rise d${i + 2} flex items-center gap-6`}>
+            <p className="slide-body-lg max-w-[280px] leading-tight">{t}</p>
+            {i < steps.length - 1 && <span className="text-5xl text-bill-green">→</span>}
           </div>
         ))}
       </div>
     </div>
-    <div className="fade-t-ink anim-fade d6 absolute right-0 bottom-0 z-10 h-[380px] w-[40%]" />
+    <div className="fade-t-ink anim-fade d6 absolute right-0 bottom-0 z-10 h-[340px] w-[36%]" />
     <div className="anim-fade d6 absolute bottom-20 right-20 z-20 text-right text-white">
       <p className="slide-body-lg font-semibold">Lotta Stigsdotter</p>
-      <p className="slide-body opacity-75">Samlande kraft bakom BFEF</p>
+      <p className="slide-body opacity-75">En av eldsjälarna bakom BFEF</p>
     </div>
   </Slide>;
 }
@@ -119,16 +111,21 @@ export function S05B() {
     <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
     {/* Täcker originalbildens egen rubrik, men lämnar avståndsillustrationen nedtill fri */}
     <div
-      className="fade-r-ink absolute top-0 left-0 z-10 h-[780px] w-[46%]"
+      className="fade-r-ink absolute top-0 left-0 z-10 h-[820px] w-[55%]"
       style={{
         maskImage: "linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%)",
         WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%)",
       }}
     />
     <ActTag act="Akt 1" name="Läget" />
-    <div className="absolute top-[240px] left-20 z-20 w-[760px]">
+    <div className="absolute top-[230px] left-20 z-20 w-[820px]">
       <h2 className="slide-title-lg anim-rise d1">Nära staden.<br /><span className="text-bill-teal">Nära marknaden.</span></h2>
-      <p className="slide-body anim-fade d4 mt-10 max-w-[600px] opacity-75">Natur, livskvalitet och tillgänglighet på samma plats.</p>
+      <div className="anim-fade d4 mt-10 space-y-3">
+        <p className="slide-body-lg">Fem minuter med bil från Skövde centrum</p>
+        <p className="slide-body-lg">Cirka 1 timme med tåg från Göteborg</p>
+        <p className="slide-body-lg">Cirka 2 timmar med tåg från Stockholm</p>
+      </div>
+      <p className="slide-source mt-8">Restider avser direkttåg på Västra stambanan, ordinarie tidtabell.</p>
     </div>
   </Slide>;
 }

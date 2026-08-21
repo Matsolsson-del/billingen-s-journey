@@ -20,35 +20,22 @@ export function S07() {
   const moves = [
     { src: img.skiClassic, from: "Väderberoende", to: "Mer snösäkert" },
     { src: img.billingecenter, from: "Enskilda delar", to: "Sammanhängande plats" },
-    { src: img.mtbForest, from: "Vintersäsong", to: "Året runt" },
+    { src: img.vindskydd, from: "Vintersäsong", to: "Året runt" },
   ];
   return <Slide tone="ink">
     <ActTag {...A2} />
     <h2 className="slide-title anim-rise d1 absolute top-[145px] left-24">Pengarna byggde tre förflyttningar</h2>
-    <div className="absolute top-[310px] right-24 bottom-20 left-24 grid grid-cols-3 gap-12">
+    <div className="absolute top-[300px] right-24 bottom-[150px] left-24 grid grid-cols-3 gap-12">
       {moves.map((m, i) => <div key={m.from} className={`anim-rise d${i + 2} relative overflow-hidden`}>
-        <img src={m.src} alt="Billingen" className="absolute inset-0 h-full w-full object-cover" />
+        <img src={m.src} alt={`${m.from} blir ${m.to}`} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-bill-ink via-transparent to-transparent" />
         <div className="absolute right-10 bottom-10 left-10"><p className="slide-body opacity-60">{m.from}</p><p className="slide-subtitle mt-2 text-bill-yellow">→ {m.to}</p></div>
       </div>)}
     </div>
+    <p className="slide-body-lg anim-fade d6 absolute bottom-[60px] left-24 opacity-75">Planerna förändrades. Ägare byttes. Förutsättningarna hann skifta. <span className="text-bill-teal">Men riktningen låg fast.</span></p>
   </Slide>;
 }
 
-export function S08({ step = 0 }: { step?: number }) {
-  const journey = ["Ankomst", "Aktivitet", "Mat", "Boende", "Återbesök"];
-  return <Slide tone="deep">
-    <ActTag act="Akt 2" name="Systemet" />
-    <h2 className="slide-title anim-rise d1 absolute top-[145px] left-24">Gästen möter inte våra organisationsgränser</h2>
-    <div className="absolute top-[430px] right-24 left-24 flex items-center justify-between">
-      {journey.map((x, i) => <div key={x} className="flex items-center">
-        <div className="flex h-[190px] w-[190px] items-center justify-center rounded-full border-2 border-white/25 bg-white/5 transition-all duration-700" style={{ opacity: step >= 1 || i === 0 ? 1 : .2 }}><p className="slide-body text-center">{x}</p></div>
-        {i < journey.length - 1 && <span className="mx-8 text-5xl text-bill-yellow">→</span>}
-      </div>)}
-    </div>
-    <p className="slide-subtitle absolute bottom-16 left-24 text-bill-teal" style={{ opacity: step >= 1 ? 1 : 0 }}>Destinationen är upplevelsen mellan delarna.</p>
-  </Slide>;
-}
 
 export function S09() {
   return <Slide tone="green">
@@ -64,14 +51,16 @@ export function S09() {
 
 export function S10() {
   const seasons = [
-    { s: "Vinter", src: img.skiRace }, { s: "Vår", src: img.trailRun },
-    { s: "Sommar", src: img.billingecenter }, { s: "Höst", src: img.mtbForest },
+    { s: "Vinter", src: img.xcFamily, alt: "Familj på längdskidor i Billingens spår" },
+    { s: "Vår", src: img.trailRun, alt: "Löpning på Billingens stigar" },
+    { s: "Sommar", src: img.mtb, alt: "Mountainbike i sommargrön skog på Billingen" },
+    { s: "Höst", src: img.mtbForest, alt: "Cyklist i höstskog på Billingen" },
   ];
   return <Slide tone="sand">
     <ActTag act="Akt 2" name="Året runt" />
     <h2 className="slide-title anim-rise d1 absolute top-[145px] left-24">Året runt är en affärsmodell</h2>
     <div className="absolute top-[300px] right-24 bottom-24 left-24 grid grid-cols-4 gap-8">
-      {seasons.map((x, i) => <Tile key={x.s} src={x.src} alt={x.s} label={x.s} className={`anim-rise d${i + 2}`} />)}
+      {seasons.map((x, i) => <Tile key={x.s} src={x.src} alt={x.alt} label={x.s} className={`anim-rise d${i + 2}`} />)}
     </div>
     <p className="slide-body absolute bottom-14 left-24 opacity-60">Jämnare efterfrågan · robustare verksamheter · bättre nyttjande</p>
   </Slide>;

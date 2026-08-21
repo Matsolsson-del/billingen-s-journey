@@ -175,11 +175,12 @@
   --slide-title-lg: 96px;
   --slide-title: 72px;
   --slide-subtitle: 44px;
-  --slide-body-lg: 34px;
-  --slide-body: 28px;
-  --slide-caption: 24px;
-  --slide-kicker: 22px;
+  --slide-body-lg: 40px;
+  --slide-body: 33px;
+  --slide-caption: 28px;
+  --slide-kicker: 26px;
   --slide-chrome: 19px;
+  --slide-source: 22px;
 }
 
 .slide-mega {
@@ -371,4 +372,13 @@
 }
 .fade-t-ink {
   background-image: linear-gradient(to top, rgba(14,30,31,0.92) 0%, rgba(14,30,31,0.45) 45%, rgba(14,30,31,0) 100%);
+}
+
+/* Diskret källrad på faktaslides. */
+.slide-source {
+  font-family: var(--font-body-family);
+  font-size: var(--slide-source, 22px);
+  line-height: 1.35;
+  font-weight: 400;
+  opacity: 0.55;
 }
