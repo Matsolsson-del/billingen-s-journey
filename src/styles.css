@@ -382,3 +382,39 @@
   font-weight: 400;
   opacity: 0.55;
 }
+
+/* Lokala toningar: mörk textzon, mjuk övergång, ljust huvudmotiv. */
+.fade-r-ink-soft {
+  background-image: linear-gradient(to right, rgba(14,30,31,0.94) 0%, rgba(14,30,31,0.80) 26%, rgba(14,30,31,0.32) 52%, rgba(14,30,31,0.06) 74%, rgba(14,30,31,0) 100%);
+}
+.fade-r-deep-soft {
+  background-image: linear-gradient(to right, rgba(0,88,84,0.96) 0%, rgba(0,88,84,0.78) 24%, rgba(0,88,84,0.30) 54%, rgba(0,88,84,0.04) 78%, rgba(0,88,84,0) 100%);
+}
+.fade-r-sand-soft {
+  background-image: linear-gradient(to right, rgba(251,248,243,1) 0%, rgba(251,248,243,0.92) 18%, rgba(251,248,243,0.35) 46%, rgba(251,248,243,0.04) 72%, rgba(251,248,243,0) 100%);
+}
+/* Skär av toningen tidigt så huvudmotivet (t.ex. Billingetrollet) blir helt fritt. */
+.fade-r-edge {
+  background-image: linear-gradient(to right, rgba(14,30,31,1) 0%, rgba(14,30,31,0.62) 10%, rgba(14,30,31,0.18) 22%, rgba(14,30,31,0) 32%);
+}
+
+/* Bildlyft – återställer ljus och färgmättnad utan globalt grågrönt filter. */
+.photo-lift-sm {
+  filter: brightness(1.08) saturate(1.08) contrast(1.02);
+}
+.photo-lift {
+  filter: brightness(1.14) saturate(1.12) contrast(1.04);
+}
+.photo-lift-lg {
+  filter: brightness(1.24) saturate(1.18) contrast(1.06);
+}
+
+/* Diskret skugga när text ligger direkt på ljus bild. */
+.text-scrim {
+  text-shadow: 0 2px 26px rgba(6, 20, 20, 0.6);
+}
+
+/* Mer djup i porträtt som riskerar att bli urtvättade av en ljus toning. */
+.photo-crisp {
+  filter: contrast(1.14) saturate(1.1) brightness(1.02);
+}

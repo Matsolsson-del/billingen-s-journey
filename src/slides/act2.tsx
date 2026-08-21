@@ -6,7 +6,7 @@ const A2 = { act: "Akt 2", name: "Modet" };
 export function S06() {
   return <Slide tone="sand">
     <ActTag {...A2} />
-    <div className="absolute inset-y-0 right-0 overflow-hidden w-[46%]"><Photo src={img.pumptrack} alt="Pumptrack på Billingen" /><div className="fade-r-sand absolute inset-0" /></div>
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[46%]"><Photo src={img.pumptrack} alt="Pumptrack på Billingen" className="photo-lift-sm" /><div className="fade-r-sand-soft absolute inset-0" /></div>
     <div className="absolute top-[210px] left-24 w-[1030px]">
       <p className="slide-kicker text-bill-green">Beslutad total investeringsbudget</p>
       <p className="slide-mega anim-rise d1 mt-8 text-bill-green" style={{ fontSize: 172, whiteSpace: "nowrap" }}>288 mkr</p>
@@ -27,12 +27,13 @@ export function S07() {
     <h2 className="slide-title anim-rise d1 absolute top-[145px] left-24">Pengarna byggde tre förflyttningar</h2>
     <div className="absolute top-[300px] right-24 bottom-[150px] left-24 grid grid-cols-3 gap-12">
       {moves.map((m, i) => <div key={m.from} className={`anim-rise d${i + 2} relative overflow-hidden`}>
-        <img src={m.src} alt={`${m.from} blir ${m.to}`} className="absolute inset-0 h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-bill-ink via-transparent to-transparent" />
-        <div className="absolute right-10 bottom-10 left-10"><p className="slide-body opacity-60">{m.from}</p><p className="slide-subtitle mt-2 text-bill-yellow">→ {m.to}</p></div>
+        <img src={m.src} alt={`${m.from} blir ${m.to}`} className="photo-lift absolute inset-0 h-full w-full object-cover" />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,30,31,0.96) 0%, rgba(14,30,31,0.86) 26%, rgba(14,30,31,0.30) 50%, rgba(14,30,31,0) 66%)" }} />
+        <div className="absolute right-10 bottom-10 left-10"><p className="slide-body opacity-90">{m.from}</p><p className="slide-body-lg mt-2 font-semibold text-bill-yellow">→ {m.to}</p></div>
+
       </div>)}
     </div>
-    <p className="slide-body-lg anim-fade d6 absolute bottom-[60px] left-24 opacity-75">Planerna förändrades. Ägare byttes. Förutsättningarna hann skifta. <span className="text-bill-teal">Men riktningen låg fast.</span></p>
+    <p className="slide-body-lg anim-fade d6 absolute bottom-[60px] left-24 opacity-95">Planerna förändrades. Ägare byttes. Förutsättningarna hann skifta. <span className="text-bill-teal">Men riktningen låg fast.</span></p>
   </Slide>;
 }
 
