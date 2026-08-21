@@ -42,35 +42,36 @@ export function S11C({ step = 0 }: { step?: number }) {
     { y: "2023", t: "Billingehus återöppnar" },
     { y: "2024–2025", t: "Spa och kongress färdigställs" },
   ];
-  return <Slide tone="sand">
+  return <Slide tone="ink">
     <div className="absolute inset-y-0 left-0 w-[64%] overflow-hidden">
-      <Photo src={img.bergasalenNight} alt="Bergasalen på Billingehus i kvällsljus" position="center 55%" zoom={false} />
+      <Photo src={img.bergasalenNight} alt="Bergasalen på Billingehus" position="center 55%" zoom={false} />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.78) 0%, rgba(4,26,24,.30) 34%, rgba(4,26,24,.55) 62%, rgba(4,26,24,.92) 100%)" }} />
     </div>
     <div
-      className="absolute right-0 bottom-0 w-[36%] overflow-hidden transition-all duration-700"
-      style={{ top: 0, opacity: step >= 1 ? 1 : 0, transform: step >= 1 ? "none" : "translateX(28px)" }}
+      className="absolute inset-y-0 right-0 w-[36%] overflow-hidden transition-all duration-700"
+      style={{ opacity: step >= 1 ? 1 : 0, transform: step >= 1 ? "none" : "translateX(28px)" }}
     >
       <Photo src={img.elevationSpa} alt="Utomhuspool med utsikt, Elevation Spa" position="center 50%" zoom={false} />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.35) 0%, rgba(4,26,24,.05) 40%, rgba(4,26,24,.45) 100%)" }} />
     </div>
-    <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.72) 0%, rgba(4,26,24,.22) 46%, rgba(4,26,24,.10) 100%)" }} />
     <ActTag act="Akt 3" name="Förvandlingen" />
-    <div className="absolute top-[190px] left-24 w-[1180px] text-white">
-      <h2 className="slide-title-lg anim-rise d1">Kongress. Spa. Outdoor.</h2>
-      <p className="slide-title anim-rise d3 mt-4 text-bill-yellow">På samma berg.</p>
+    <div className="absolute top-[180px] left-24 w-[1080px] text-white">
+      <h2 className="slide-title-lg anim-rise d1">Kongress. Spa.<br />Outdoor.</h2>
+      <p className="slide-title anim-rise d3 mt-6 text-bill-yellow">På samma berg.</p>
     </div>
-    <div className="absolute bottom-[190px] left-24 flex w-[1180px] items-end gap-20">
+    <div className="absolute bottom-[170px] left-24 flex w-[1120px] items-end gap-16 text-white">
       {facts.map((f, i) => (
-        <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 2 ? 1 : 0.08, transform: step >= i + 2 ? "none" : "translateY(16px)" }}>
-          <p className="slide-title text-white" style={{ whiteSpace: "nowrap" }}>{f.v}</p>
-          <p className="slide-body mt-3 max-w-[300px] text-white opacity-80">{f.l}</p>
+        <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 2 ? 1 : 0.1, transform: step >= i + 2 ? "none" : "translateY(16px)" }}>
+          <p className="slide-subtitle" style={{ whiteSpace: "nowrap", fontSize: 60, lineHeight: 1.05 }}>{f.v}</p>
+          <p className="slide-body mt-3 max-w-[290px] opacity-75">{f.l}</p>
         </div>
       ))}
     </div>
-    <div className="absolute bottom-14 left-24 flex w-[1180px] items-baseline gap-14 border-t border-white/25 pt-6">
+    <div className="absolute bottom-14 left-24 flex w-[1120px] items-baseline gap-12 border-t border-white/25 pt-6 text-white">
       {years.map((x) => (
         <div key={x.y} className="flex items-baseline gap-4">
           <span className="slide-caption text-bill-teal">{x.y}</span>
-          <span className="slide-caption text-white opacity-70">{x.t}</span>
+          <span className="slide-caption opacity-70">{x.t}</span>
         </div>
       ))}
     </div>
