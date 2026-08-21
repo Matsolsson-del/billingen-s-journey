@@ -45,7 +45,7 @@ export function S11C({ step = 0 }: { step?: number }) {
   return <Slide tone="ink">
     <div className="absolute inset-y-0 left-0 w-[64%] overflow-hidden">
       <Photo src={img.bergasalenNight} alt="Bergasalen på Billingehus" position="center 55%" zoom={false} className="photo-lift-lg" />
-      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.80) 0%, rgba(4,26,24,.34) 26%, rgba(4,26,24,.06) 46%, rgba(4,26,24,.42) 74%, rgba(4,26,24,.88) 100%)" }} />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.80) 0%, rgba(4,26,24,.34) 26%, rgba(4,26,24,.06) 46%, rgba(4,26,24,.58) 70%, rgba(4,26,24,.92) 100%)" }} />
     </div>
     <div
       className="absolute inset-y-0 right-0 w-[36%] overflow-hidden transition-all duration-700"

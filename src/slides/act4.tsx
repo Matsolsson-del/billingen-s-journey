@@ -61,14 +61,14 @@ export function S19() {
 export function S20({step=0}:{step?:number}) {
   return <Slide tone="bare">
     <Photo src={img.winterAerial} alt="Billingen från luften" position="center 55%" className="photo-lift" />
-    <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(14,30,31,0.86) 0%, rgba(14,30,31,0.70) 42%, rgba(14,30,31,0.38) 72%, rgba(14,30,31,0.22) 100%)" }} />
+    <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(14,30,31,0.90) 0%, rgba(14,30,31,0.80) 40%, rgba(14,30,31,0.62) 70%, rgba(14,30,31,0.48) 100%)" }} />
     <img src={img.logo} alt="Billingen Skövde" className="absolute top-20 left-20 h-20 w-auto" />
     <div className="absolute top-1/2 right-24 left-24 -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Det vi tar med oss</p>
-      <p className="slide-title-lg anim-rise mt-9">Riktning · mod · system · tillsammans · uthållighet</p>
+      <p className="slide-title-lg anim-rise text-scrim mt-9">Riktning · mod · system · tillsammans · uthållighet</p>
       <div className="mt-16 border-t border-white/20 pt-14 transition-all duration-1000" style={{opacity:step>=1?1:0,transform:step>=1?"none":"translateY(24px)"}}>
-        <p className="slide-title text-bill-teal">Det började som en gåva.</p>
-        <p className="slide-title mt-4">Vårt ansvar är att lämna över något ännu bättre.</p>
+        <p className="slide-title text-bill-teal text-scrim">Det började som en gåva.</p>
+        <p className="slide-title text-scrim mt-4">Vårt ansvar är att lämna över något ännu bättre.</p>
       </div>
     </div>
   </Slide>;
