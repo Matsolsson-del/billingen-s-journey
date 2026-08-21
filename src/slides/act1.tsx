@@ -80,17 +80,17 @@ export function S05B() {
     <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
     {/* Täcker originalbildens egen rubrik så typografin följer presentationen */}
     <div
-      className="absolute top-0 left-0 h-[62%] w-[58%]"
+      className="absolute inset-y-0 left-0 z-10 w-[46%]"
       style={{
-        background: "linear-gradient(to right, var(--bill-ink) 0%, var(--bill-ink) 66%, transparent 100%)",
-        maskImage: "linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%)",
-        WebkitMaskImage: "linear-gradient(to bottom, #000 0%, #000 88%, transparent 100%)",
+        background:
+          "linear-gradient(to right, var(--bill-ink) 0%, var(--bill-ink) 72%, color-mix(in oklab, var(--bill-ink) 0%, transparent) 100%)",
       }}
     />
     <ActTag act="Akt 1" name="Läget" />
-    <div className="absolute top-[210px] left-20 w-[820px]">
+    <div className="absolute top-[300px] left-20 z-20 w-[760px]">
       <h2 className="slide-title-lg anim-rise d1">Nära staden.<br /><span className="text-bill-teal">Nära marknaden.</span></h2>
-      <p className="slide-body anim-fade d4 mt-10 max-w-[620px] opacity-75">Natur, livskvalitet och tillgänglighet på samma plats.</p>
+      <p className="slide-body anim-fade d4 mt-10 max-w-[600px] opacity-75">Natur, livskvalitet och tillgänglighet på samma plats.</p>
     </div>
+
   </Slide>;
 }
