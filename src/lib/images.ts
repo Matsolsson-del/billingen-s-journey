@@ -8,6 +8,7 @@ import heroSunset from "@/assets/hero-sunset.jpg.asset.json";
 import hotelroom from "@/assets/hotelroom.jpg.asset.json";
 import modernBuilding from "@/assets/modern-building.jpg.asset.json";
 import mtbForest from "@/assets/mtb-forest.jpg.asset.json";
+import naraStaden from "@/assets/nara-staden.png.asset.json";
 import mtb from "@/assets/mtb.jpg.asset.json";
 import karta from "@/assets/oversiktskarta.jpg.asset.json";
 import panorama from "@/assets/panorama.jpg.asset.json";
@@ -36,6 +37,7 @@ export const img = {
   modernBuilding: modernBuilding.url,
   mtbForest: mtbForest.url,
   mtb: mtb.url,
+  naraStaden: naraStaden.url,
   karta: karta.url,
   panorama: panorama.url,
   pumptrack: pumptrack.url,
