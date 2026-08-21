@@ -93,7 +93,7 @@ export function S04B() {
         ))}
       </div>
     </div>
-    <div className="anim-fade d6 absolute inset-y-0 right-0 z-10 w-[42%] bg-gradient-to-t from-bill-ink/85 via-bill-ink/25 to-transparent" />
+    <div className="fade-t-ink anim-fade d6 absolute right-0 bottom-0 z-10 h-[380px] w-[40%]" />
     <div className="anim-fade d6 absolute bottom-20 right-20 z-20 text-right text-white">
       <p className="slide-body-lg font-semibold">Lotta Stigsdotter</p>
       <p className="slide-body opacity-75">Samlande kraft bakom BFEF</p>
