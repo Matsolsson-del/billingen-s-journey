@@ -1,180 +1,66 @@
 import { img } from "@/lib/images";
 import { Slide, Photo, ActTag, Tile } from "@/components/deck/ui";
 
-const A4 = { act: "Akt 4", name: "Tillsammans" };
-
-/* 11 — Billingehus */
 export function S11() {
-  return (
-    <Slide tone="sand">
-      <ActTag {...A4} />
-      <h2 className="slide-title anim-rise d1 absolute top-[160px] left-24">
-        En gammal ikon får en ny roll
-      </h2>
-      <div className="absolute top-[330px] right-24 left-24 grid h-[480px] grid-cols-2 gap-14">
-        <Tile
-          className="anim-rise d2"
-          src={img.modernBuilding}
-          alt="Billingehus på berget"
-          label="Ikonen på berget"
-          position="center 45%"
-        />
-        <Tile
-          className="anim-rise d3"
-          src={img.hotelroom}
-          alt="Nyrenoverat rum på Billingehus"
-          label="Efter omvandlingen"
-          position="center 50%"
-        />
-      </div>
-      <p className="slide-body anim-fade d6 absolute right-24 bottom-16 left-24 opacity-70">
-        Billingehus har funnits med från början. Nu är hotellet en starkare del av destinationen.
-      </p>
-    </Slide>
-  );
+  return <Slide tone="ink">
+    <ActTag act="Akt 3" name="Produkten" />
+    <div className="absolute inset-y-0 right-0 w-1/2"><Photo src={img.skiRace} alt="Längdskidåkning på Billingen" position="center 48%" /><div className="absolute inset-0 bg-gradient-to-r from-bill-ink via-bill-ink/20 to-transparent" /></div>
+    <div className="absolute top-1/2 left-24 w-[900px] -translate-y-1/2">
+      <p className="slide-kicker text-bill-yellow">Officiellt Vasaloppscenter</p>
+      <h2 className="slide-title-lg anim-rise d1 mt-10">Sälj inte elva<br />kilometer spår.</h2>
+      <p className="slide-title anim-rise d4 mt-12 text-bill-teal">Sälj målet.</p>
+      <p className="slide-body anim-fade d6 mt-8 opacity-65">Längdskidor · cykel · löpning · Resan till Vasaloppet</p>
+    </div>
+  </Slide>;
 }
 
-/* 12 — offentligt + privat */
 export function S12() {
-  return (
-    <Slide tone="sand">
-      <ActTag {...A4} />
-      <h2 className="slide-title anim-rise d1 absolute top-[150px] left-24 max-w-[1400px]">
-        När offentligt och privat
-        <br />
-        förstärker varandra
-      </h2>
-      <div className="absolute top-[400px] right-24 left-24 grid h-[400px] grid-cols-[1fr_auto_1fr] items-center gap-10">
-        <div className="anim-rise d3 relative h-full overflow-hidden">
-          <img
-            src={img.mtbForest}
-            alt="Aktiviteter på Billingen"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-        <div className="anim-fade d5 text-bill-green" style={{ fontSize: 90, lineHeight: 1 }}>
-          ↔
-        </div>
-        <div className="anim-rise d4 relative h-full overflow-hidden">
-          <img
-            src={img.billingecenter}
-            alt="Billingehus"
-            className="absolute inset-0 h-full w-full object-cover"
-          />
-        </div>
-      </div>
-      <div className="absolute right-24 bottom-16 left-24 flex items-end justify-between">
-        <div className="anim-fade d6">
-          <p className="slide-subtitle">Platsen stärker hotellet.</p>
-          <p className="slide-subtitle mt-2">Hotellet stärker platsen.</p>
-        </div>
-        <p className="slide-body text-bill-green">
-          Gästens upplevelse slutar inte vid hotelldörren.
-        </p>
-      </div>
-    </Slide>
-  );
+  return <Slide tone="sand">
+    <ActTag act="Akt 3" name="Följdinvesteringen" />
+    <h2 className="slide-title anim-rise d1 absolute top-[140px] left-24">När platsen stärks vågar fler investera</h2>
+    <div className="absolute top-[300px] right-24 left-24 grid h-[490px] grid-cols-2 gap-14">
+      <Tile src={img.modernBuilding} alt="Billingehus" label="2022 · Lotus tar över" className="anim-rise d2" />
+      <Tile src={img.hotelroom} alt="Nya Billingehus" label="2023–2025 · hotell, två spa och kongress" className="anim-rise d3" />
+    </div>
+    <div className="absolute right-24 bottom-12 left-24 flex justify-between"><p className="slide-subtitle text-bill-green">Platsen stärker hotellet.</p><p className="slide-subtitle text-bill-green">Hotellet stärker platsen.</p></div>
+  </Slide>;
 }
 
-/* 13 — dubbla nyttan */
 export function S13() {
-  return (
-    <Slide tone="green">
-      <ActTag {...A4} />
-      <div className="absolute top-[320px] left-1/2 flex -translate-x-1/2 items-center">
-        <div className="anim-rise d2 flex h-[460px] w-[460px] items-end justify-center rounded-full bg-white/15 pb-14">
-          <p className="slide-subtitle -translate-x-28">Besökare</p>
-        </div>
-        <div className="anim-rise d3 -ml-[170px] flex h-[460px] w-[460px] items-end justify-center rounded-full bg-white/15 pb-14">
-          <p className="slide-subtitle translate-x-28">Skövdebor</p>
-        </div>
-      </div>
-      <p className="slide-title anim-fade d5 absolute top-[500px] left-1/2 -translate-x-1/2 text-center text-bill-mist">
-        Attraktionskraft
-      </p>
-      <p className="slide-body anim-fade d7 absolute right-24 bottom-16 left-24 text-center opacity-75">
-        En bra plats att besöka kan samtidigt vara en bättre plats att leva på.
-      </p>
-    </Slide>
-  );
+  const actors = ["Politiken", "Skövde kommun", "Föreningslivet", "Näringslivet", "Billingehus", "Turistrådet", "Next Skövde", "Invånarna"];
+  return <Slide tone="deep">
+    <ActTag act="Akt 3" name="Människorna" />
+    <h2 className="slide-title anim-rise d1 absolute top-[130px] right-24 left-24 text-center">Ingen enskild aktör äger framgången</h2>
+    <div className="absolute top-[590px] left-1/2 h-[760px] w-[760px] -translate-x-1/2 -translate-y-1/2">
+      {actors.map((t, i) => { const a=(i/actors.length)*Math.PI*2-Math.PI/2; return <div key={t} className={`anim-fade d${Math.min(8,i+1)} absolute w-[300px] text-center`} style={{left:380+Math.cos(a)*310-150,top:380+Math.sin(a)*310-20}}><span className="slide-body">{t}</span></div>; })}
+      <div className="anim-rise absolute top-1/2 left-1/2 flex h-[250px] w-[250px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-bill-yellow text-bill-ink"><p className="slide-subtitle">Billingen</p></div>
+    </div>
+    <p className="slide-body absolute bottom-14 left-24 opacity-60">Någon måste hålla ihop helheten. Alla måste kunna bidra.</p>
+  </Slide>;
 }
 
-/* 14 — Turistrådet Västsverige */
 export function S14() {
-  return (
-    <Slide tone="sand">
-      <ActTag {...A4} />
-      <div className="absolute inset-y-0 right-0 w-[46%]">
-        <Photo src={img.vandring} alt="Vandring på Billingens leder" position="center 45%" zoom={false} />
-      </div>
-      <div className="absolute top-1/2 left-24 w-[820px] -translate-y-1/2">
-        <h2 className="slide-title-lg anim-rise d1 text-bill-green">Tillsammans når vi längre</h2>
-        <p className="slide-subtitle anim-rise d3 mt-12 opacity-85">
-          Produktutveckling · kampanjer · pressresor · PR
-        </p>
-        <p className="slide-body anim-fade d5 mt-12 max-w-[720px] opacity-65">
-          Samarbetet med Turistrådet Västsverige har varit en viktig del i att utveckla och
-          positionera Billingen.
-        </p>
-      </div>
-    </Slide>
-  );
+  return <Slide tone="bare">
+    <Photo src={img.vandring} alt="Vandring på Billingen" position="center 46%" zoom={false} />
+    <div className="absolute inset-0 bg-gradient-to-r from-bill-ink/95 via-bill-ink/70 to-bill-ink/20" />
+    <ActTag act="Akt 3" name="Connect" />
+    <div className="absolute top-1/2 left-24 w-[980px] -translate-y-1/2">
+      <p className="slide-kicker text-bill-yellow">Till er i rummet</p>
+      <h2 className="slide-title-lg anim-rise d1 mt-8">Tillsammans når<br />vi längre</h2>
+      <p className="slide-subtitle anim-rise d3 mt-12 text-bill-teal">Produktutveckling · kampanjer · pressresor · PR</p>
+      <p className="slide-body anim-fade d5 mt-10 max-w-[850px] opacity-70">Samarbetet med Turistrådet Västsverige har gjort Billingen starkare än vi hade kunnat göra platsen själva.</p>
+    </div>
+  </Slide>;
 }
 
-/* 15 — evenemang */
 export function S15() {
-  const ev = [
-    { t: "SM-veckan 2023", src: img.skiRace, alt: "Tävling i spåret på Billingen" },
-    { t: "Enduro-VM 2025", src: img.mtb, alt: "Mountainbike på Billingen" },
-    { t: "SM-veckan 2027", src: img.eventCrowd, alt: "Publik vid evenemang på Billingen" },
-  ];
-  return (
-    <Slide tone="ink">
-      <ActTag {...A4} />
-      <h2 className="slide-title anim-rise d1 absolute top-[160px] left-24">
-        Evenemang utvecklar destinationen
-      </h2>
-      <div className="absolute top-[330px] right-24 bottom-24 left-24 grid grid-cols-3 gap-12">
-        {ev.map((e, i) => (
-          <Tile key={e.t} src={e.src} alt={e.alt} label={e.t} className={`anim-rise d${i + 2}`} />
-        ))}
-      </div>
-    </Slide>
-  );
-}
-
-/* 16 — hållbarhet */
-export function S16() {
-  const dims = ["Natur", "Folkhälsa", "Inkludering", "Året runt"];
-  return (
-    <Slide tone="sand">
-      <ActTag {...A4} />
-      <div className="absolute inset-y-0 right-0 w-[40%]">
-        <Photo src={img.bergetgruppen} alt="Bergetgruppen arbetar på Billingen" position="center 50%" />
-      </div>
-      <div className="absolute top-[240px] left-24 w-[960px]">
-        <h2 className="slide-title anim-rise d1">
-          Hållbarhet är hur vi
-          <br />
-          utvecklar platsen
-        </h2>
-        <div className="mt-16 grid grid-cols-2 gap-x-16 gap-y-10">
-          {dims.map((d, i) => (
-            <p
-              key={d}
-              className={`slide-subtitle anim-rise d${i + 3} border-t border-bill-ink/15 pt-6`}
-            >
-              {d}
-            </p>
-          ))}
-        </div>
-      </div>
-      <div className="anim-rise d8 absolute bottom-16 left-24">
-        <p className="slide-subtitle text-bill-green">Nominerad till Årets Hållbarhetskliv 2026</p>
-        <p className="slide-caption mt-3 opacity-60">
-          Ett kvitto på att riktningen uppmärksammas.
-        </p>
-      </div>
-    </Slide>
-  );
+  const ev=[{t:"SM-veckan 2023",src:img.skiRace},{t:"Enduro-VM 2025",src:img.mtb},{t:"SM-veckan 2027",src:img.eventCrowd}];
+  return <Slide tone="ink">
+    <ActTag act="Akt 3" name="Evenemangen" />
+    <h2 className="slide-title anim-rise d1 absolute top-[140px] left-24">Evenemang är en utvecklingsmotor</h2>
+    <div className="absolute top-[300px] right-24 bottom-24 left-24 grid grid-cols-3 gap-12">
+      {ev.map((e,i)=><Tile key={e.t} src={e.src} alt={e.t} label={e.t} className={`anim-rise d${i+2}`} />)}
+    </div>
+    <p className="slide-body absolute bottom-14 left-24 text-bill-yellow">Deadline → stresstest → räckvidd → stolthet → nästa nivå</p>
+  </Slide>;
 }

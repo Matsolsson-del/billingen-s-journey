@@ -1,8 +1,8 @@
 import type { ComponentType } from "react";
-import { S01, S02, S03, S04 } from "./act1";
-import { S05, S06, S07, S08, S09, S10 } from "./act2";
-import { S11, S12, S13, S14, S15, S16 } from "./act3";
-import { S17, S18, S19, S20, S21, S22, S23 } from "./act4";
+import { S01, S02, S03, S04, S05 } from "./act1";
+import { S06, S07, S08, S09, S10 } from "./act2";
+import { S11, S12, S13, S14, S15 } from "./act3";
+import { S16, S17, S18, S19, S20 } from "./act4";
 
 export type SlideDef = {
   id: number;
@@ -23,27 +23,24 @@ const d = (
 ): SlideDef => ({ id, title, act, Component, notes, steps });
 
 export const slides: SlideDef[] = [
-  d(1, "Billingen", "Öppning", S01, "Jag står här och berättar historien. Men väldigt många andra har byggt den."),
-  d(2, "1970 – drömmen", "Akt 1", S02, "Arne ”Uno-X” och Maja Sandberg drömde om ett friluftsparadis på berget. 2026 bygger vi vidare på samma idé."),
-  d(3, "Potential", "Akt 1", S03, "Naturen fanns. Men potential är inte en destination."),
-  d(4, "Riktningen", "Akt 2", S04, "En gemensam riktning bestämdes – först riktningen, sedan investeringarna."),
-  d(5, "≈ 280 mkr", "Akt 2", S05, "Skövde kommun vågade investera långsiktigt: ca 280 mkr 2017–2024, plus ca 20 mkr i Billingebacken 2026."),
-  d(6, "Politiskt mod", "Akt 2", S06, "Besluten fattas långt innan effekterna går att mäta. Var generös mot politiken – över mandatperioder, oavsett majoritet."),
-  d(7, "Kartan", "Akt 3", S07, "Ett sammanhängande system tre kilometer från centrum."),
-  d(8, "För vem", "Akt 3", S08, "Barnfamiljen, den aktiva, motionären och eliten – samtidigt."),
-  d(9, "Året runt", "Akt 3", S09, "Året runt är inte en ambition, det är en affärsmodell."),
-  d(10, "Vasaloppscenter", "Akt 3", S10, "Vasaloppscenter i längd, cykel och löpning. Människan köper inte spåret – hon köper resan mot sitt mål."),
-  d(11, "Billingehus", "Akt 4", S11, "En ikon sedan början – och en privat omvandling som gjort hotellet till en starkare del av destinationen."),
-  d(12, "Offentligt + privat", "Akt 4", S12, "Offentlig destinationsinvestering och privat kommersiell investering förstärker varandra. Gästens upplevelse slutar inte vid hotelldörren."),
-  d(13, "Dubbla nyttan", "Akt 4", S13, "Investeringen är lika mycket för skövdebon som för besökaren. Det är attraktionskraft."),
-  d(14, "Turistrådet Västsverige", "Akt 4", S14, "En framgångsfaktor har varit att inte göra allt själva. Samarbetet kring kampanjer, pressresor och marknadsbearbetning har varit mycket värdefullt."),
-  d(15, "Evenemang", "Akt 4", S15, "Evenemang testar infrastrukturen, bygger position, ger media och lokal stolthet – och driver produktutveckling."),
-  d(16, "Hållbarhet", "Akt 4", S16, "Hållbarhet är hur vi utvecklar platsen. Nomineringen till Årets Hållbarhetskliv är ett kvitto på att riktningen uppmärksammas."),
-  d(17, "Huvudtesen", "Akt 5", S17, "Klicka fram cirkeln: vision, politiska beslut, investeringar, föreningsliv, produkt, evenemang, marknadsföring, besökare, nya investeringar.", 2),
-  d(18, "Nätverket", "Akt 5", S18, "Ingen enskild aktör äger framgången. Men någon måste ta ansvar för helheten – det behöver inte vara ett destinationsbolag."),
-  d(19, "Gästnätterna", "Akt 6", S19, "203 000 → 229 209 → 245 885. Klicka fram åren. Billingen är en av flera motorer i Skövdes växande destination.", 4),
-  d(20, "Jan–jun 2026", "Akt 6", S20, "PLACEHOLDER: fyll i verifierade siffror från Tillväxtverket för jan–jun 2026 (Skövde, Västsverige, Sverige)."),
-  d(21, "Flaskhalsen", "Akt 6", S21, "Efterfrågan börjar växa ur kapaciteten. Destinationsutveckling blir aldrig färdig."),
-  d(22, "Fem lärdomar", "Akt 7", S22, "Riktning, politiskt mod, system, tillsammans, uthållighet."),
-  d(23, "Slutbilden", "Avslutning", S23, "Klicka fram slutpoängen. Det började med en dröm – och vi är många som byggt vidare på den.", 2),
+  d(1, "Billingen", "Öppning", S01, "Börja utan att presentera projektet. Fråga i stället: Hur bygger man en destination? Vänta. Säg sedan: Det korta svaret är att ingen gör det ensam."),
+  d(2, "Ett beslut 1967", "Akt 1", S02, "Arne hade sålt Uno-X. Han och Maja kunde ha köpt aktier. I stället valde de att göra något roligt för Skövde. Det valet blev början på dagens Billingen."),
+  d(3, "Gåvan", "Akt 1", S03, "1970 stod ett helt friluftsparadis färdigt. Sedan överläts friluftsområdet till kommunen för en krona. Pausa efter siffran. Vår resa börjar alltså med ett förtroende."),
+  d(4, "Femtio år senare", "Akt 1", S04, "En gåva är inte färdig för all framtid. Anläggningar åldras, vanor förändras och vintern blir mindre förutsägbar. Frågan blev: skulle vi förvalta minnet – eller utveckla idén?"),
+  d(5, "Riktningen", "Akt 1", S05, "Vi började inte med en inköpslista. Vi började med riktningen: södra och västra Sveriges bästa outdoordestination året runt. Den riktningen fick överleva både mandatperioder och förändrade planer."),
+  d(6, "Modet", "Akt 2", S06, "288 miljoner är en stor offentlig investering. Besluten fattades långt innan gästnätter och rubriker kunde mätas. Tacka politiken över block- och mandatperioder – uthålligheten är själva poängen."),
+  d(7, "Vad som byggdes", "Akt 2", S07, "Räkna inte upp allt. Visa tre rörelser: från väderberoende till mer snösäkerhet, från separata anläggningar till ett sammanhängande område och från säsong till året runt."),
+  d(8, "Systemet", "Akt 2", S08, "Klicka fram helheten. Gästen möter inte våra organisationsgränser. Hon möter resan: ankomst, aktivitet, mat, boende och nästa anledning att komma tillbaka.", 2),
+  d(9, "Dubbla nyttan", "Akt 2", S09, "Det här är inte turism eller invånarnytta. Samma investering kan ge barnets fritid, föreningens arena, företagens attraktionskraft och besökarens upplevelse."),
+  d(10, "Året runt", "Akt 2", S10, "Året runt är inte en slogan. Det är riskspridning, fler arbetstillfällen över året och bättre användning av samma infrastruktur."),
+  d(11, "Kundresan", "Akt 3", S11, "Vi säljer inte elva kilometer konstsnö. Vi hjälper någon att klara sitt första Vasalopp. Det är skillnaden mellan att marknadsföra en anläggning och att utveckla en destination."),
+  d(12, "Billingehus", "Akt 3", S12, "Kommunens investering gjorde platsen starkare. Lotus tog över 2022, öppnade hotellet 2023 och utvecklade spa och kongresskapacitet. Offentligt och privat började dra åt samma håll."),
+  d(13, "Människorna", "Akt 3", S13, "Ingen logotyp bygger en destination. Lyft föreningarna, medarbetarna, företagen, politiken, kommunen, hotellet, Turistrådet och invånarna. Någon behöver hålla ihop helheten – men ingen äger framgången."),
+  d(14, "Västsverige", "Akt 3", S14, "Vänd dig till rummet. Samarbetet med Turistrådet har gett oss kompetens, räckvidd, kampanjer, pressresor och marknadsbearbetning som vi inte hade kunnat skapa lika starkt själva."),
+  d(15, "Evenemangen", "Akt 3", S15, "Evenemang är mer än tillfälliga gästnätter. De sätter en deadline, stresstestar infrastrukturen och ger en berättelse som når långt utanför kommunen. SM-veckan 2027 är nästa nivå."),
+  d(16, "Hållbarheten", "Akt 4", S16, "Hållbarhet blir konkret när platsen fungerar för boende och besökare, fylls när den annars är tom och skapar robustare verksamheter. Billingen och Billingehus är Skaraborgs kandidat till Årets Hållbarhetskliv 2026."),
+  d(17, "Resultatet", "Akt 4", S17, "Klicka fram åren. 245 885 gästnätter 2025 är Skövdes starkaste notering hittills. Var noga: Billingen är en av flera motorer, inte ensam förklaring.", 4),
+  d(18, "Värdet", "Akt 4", S18, "Gästnätter är bara ett mått. Turismkonsumtionen ökade från 1,351 till 1,484 miljarder kronor. Men värdet syns också i stolthet, folkhälsa, föreningsliv och attraktivitet."),
+  d(19, "Inte färdiga", "Akt 4", S19, "Var öppna med nästa problem. Efterfrågan börjar ibland växa ur hotellkapaciteten, särskilt mitt i veckan. Destinationsutveckling blir aldrig färdig – varje framgång skapar nästa flaskhals."),
+  d(20, "Lärdomen", "Avslutning", S20, "Klicka fram sista meningen. Det började med två människors dröm. Det fortsatte genom hundratals beslut. Vårt ansvar är att lämna över något ännu bättre. Tack.", 2),
 ];

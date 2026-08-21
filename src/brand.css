@@ -1,0 +1,49 @@
+/* Skövde place brand — import after styles.css */
+
+@theme inline {
+  --color-bill-yellow: var(--bill-yellow);
+  --color-bill-blue: var(--bill-blue);
+}
+
+:root {
+  /* Skövde brandbook: emerald #008984, yellow #F19F04, blue #00617E */
+  --bill-green: oklch(0.573 0.101 190.2);
+  --bill-green-deep: oklch(0.414 0.073 190.2);
+  --bill-blue: oklch(0.44 0.083 217.5);
+  --bill-yellow: oklch(0.75 0.16 72.5);
+  --bill-amber: var(--bill-yellow);
+  --bill-teal: oklch(0.82 0.082 189.5);
+  --bill-mist: oklch(0.95 0.025 184);
+  --bill-sand: oklch(0.98 0.008 82);
+  --bill-ink: oklch(0.22 0.022 205);
+  /* Mont is licensed; Inter is the closest existing project-safe fallback. */
+  --font-display-family: "Mont", "Inter", ui-sans-serif, system-ui, Arial, sans-serif;
+  --font-body-family: "Crimson Text", Georgia, serif;
+}
+
+.slide-title,
+.slide-title-lg,
+.slide-mega,
+.slide-kicker,
+.slide-chrome,
+.slide-badge,
+.slide-subtitle {
+  font-family: var(--font-display-family);
+}
+
+.slide-body,
+.slide-body-lg,
+.slide-caption {
+  font-family: var(--font-body-family);
+}
+
+.slide-content::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 96px;
+  height: 18px;
+  background: var(--bill-yellow);
+  opacity: 0.95;
+}
