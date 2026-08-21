@@ -93,7 +93,7 @@ export function S04B() {
         ))}
       </div>
     </div>
-    <div className="anim-fade d6 absolute bottom-20 right-0 z-10 w-[42%] px-20 py-8 text-right">
+    <div className="anim-fade d6 absolute bottom-16 right-16 z-10 rounded-sm bg-bill-sand/90 px-8 py-5 text-right shadow-sm">
       <p className="slide-body-lg font-semibold text-bill-ink">Lotta Stigsdotter</p>
       <p className="slide-body opacity-60">Samlande kraft bakom BFEF</p>
     </div>
