@@ -74,7 +74,7 @@ export function S04B() {
   return <Slide tone="sand">
     <ActTag act="Akt 1" name="Grunden" />
     <div className="absolute inset-y-0 right-0 w-[40%]">
-      <Photo src={img.bergetgruppen} alt="Föreningsaktiva på Billingen" position="center 40%" />
+      <Photo src={img.vindskydd} alt="Vindskydd på Billingen byggt av föreningskrafter" position="center 50%" />
     </div>
     <div className="absolute top-[170px] left-24 w-[1020px]">
       <p className="slide-kicker text-bill-green">Innan besluten fanns eldsjälarna</p>
