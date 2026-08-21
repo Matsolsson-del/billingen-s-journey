@@ -4,7 +4,7 @@ import { Slide, Photo, ActTag, Tile } from "@/components/deck/ui";
 export function S11() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Produkten" />
-    <div className="absolute inset-y-0 right-0 overflow-hidden w-[56%]"><Photo src={img.skiRace} alt="Längdskidåkning på Billingen" position="center 48%" /><div className="fade-r-ink absolute inset-0" /></div>
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[56%]"><Photo src={img.skiRace} alt="Längdskidåkning på Billingen" position="center 48%" className="photo-lift" /><div className="fade-r-ink-soft absolute inset-0" /></div>
     <div className="absolute top-1/2 left-24 w-[900px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Officiellt Vasaloppscenter</p>
       <h2 className="slide-title-lg anim-rise d1 mt-10">Sälj inte elva<br />kilometer spår.</h2>
@@ -17,8 +17,8 @@ export function S11() {
 /** Risken: Billingehus före omvandlingen. */
 export function S11B() {
   return <Slide tone="ink">
-    <Photo src={img.billingehusBefore} alt="First Hotel Billingehus 2019, före omvandlingen" position="center 55%" zoom={false} />
-    <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(4,26,24,.94) 0%, rgba(4,26,24,.80) 42%, rgba(4,26,24,.35) 75%, rgba(4,26,24,.30) 100%)" }} />
+    <Photo src={img.billingehusBefore} alt="First Hotel Billingehus 2019, före omvandlingen" position="center 55%" zoom={false} className="photo-lift" />
+    <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(4,26,24,.92) 0%, rgba(4,26,24,.74) 34%, rgba(4,26,24,.28) 62%, rgba(4,26,24,.06) 85%, rgba(4,26,24,0) 100%)" }} />
     <ActTag act="Akt 3" name="Risken" />
     <div className="absolute top-1/2 left-24 w-[1000px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Billingehus 2019</p>
@@ -26,7 +26,7 @@ export function S11B() {
       <p className="slide-body-lg anim-fade d4 mt-14 opacity-85">Ett slitet hotell. En osäker framtid.</p>
       <p className="slide-body-lg anim-fade d6 mt-4 opacity-85">Destinationens viktigaste svaga länk.</p>
     </div>
-    <p className="slide-source absolute right-20 bottom-14 opacity-45">Foto: I99pema, Wikimedia Commons, CC BY-SA 4.0 (2019)</p>
+    <p className="slide-source text-scrim absolute right-20 bottom-14" style={{ opacity: 0.8 }}>Foto: I99pema, Wikimedia Commons, CC BY-SA 4.0 (2019)</p>
   </Slide>;
 }
 
@@ -35,7 +35,7 @@ export function S11C({ step = 0 }: { step?: number }) {
   const facts = [
     { v: "Upp till 750", l: "kongressgäster i Bergasalen" },
     { v: "235", l: "hotellrum" },
-    { v: "2 min", l: "till leder och konstsnöspår" },
+    { v: "Naturen", l: "direkt utanför dörren" },
   ];
   const years = [
     { y: "2021–2022", t: "Lotus tar över" },
@@ -44,26 +44,26 @@ export function S11C({ step = 0 }: { step?: number }) {
   ];
   return <Slide tone="ink">
     <div className="absolute inset-y-0 left-0 w-[64%] overflow-hidden">
-      <Photo src={img.bergasalenNight} alt="Bergasalen på Billingehus" position="center 55%" zoom={false} />
-      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.78) 0%, rgba(4,26,24,.30) 34%, rgba(4,26,24,.55) 62%, rgba(4,26,24,.92) 100%)" }} />
+      <Photo src={img.bergasalenNight} alt="Bergasalen på Billingehus" position="center 55%" zoom={false} className="photo-lift-lg" />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.80) 0%, rgba(4,26,24,.34) 26%, rgba(4,26,24,.06) 46%, rgba(4,26,24,.42) 74%, rgba(4,26,24,.88) 100%)" }} />
     </div>
     <div
       className="absolute inset-y-0 right-0 w-[36%] overflow-hidden transition-all duration-700"
       style={{ opacity: step >= 1 ? 1 : 0, transform: step >= 1 ? "none" : "translateX(28px)" }}
     >
-      <Photo src={img.elevationSpa} alt="Infinitypool med utsikt över Skövde, Elevation Spa" position="34% 50%" zoom={false} />
-      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.35) 0%, rgba(4,26,24,.05) 40%, rgba(4,26,24,.45) 100%)" }} />
+      <Photo src={img.elevationSpa} alt="Infinitypool med utsikt över Skövde, Elevation Spa" position="34% 50%" zoom={false} className="photo-lift-lg" />
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(4,26,24,.18) 0%, rgba(4,26,24,0) 32%, rgba(4,26,24,0) 62%, rgba(4,26,24,.30) 100%)" }} />
     </div>
     <ActTag act="Akt 3" name="Förvandlingen" />
     <div className="absolute top-[180px] left-24 w-[1080px] text-white">
-      <h2 className="slide-title-lg anim-rise d1">Kongress. Spa.<br />Outdoor.</h2>
-      <p className="slide-title anim-rise d3 mt-6 text-bill-yellow">På samma berg.</p>
+      <h2 className="slide-title-lg anim-rise d1 text-scrim">Kongress. Spa.<br />Outdoor.</h2>
+      <p className="slide-title anim-rise d3 mt-6 text-bill-yellow text-scrim">På samma berg.</p>
     </div>
     <div className="absolute bottom-[170px] left-24 grid w-[1120px] grid-cols-3 items-start gap-12 text-white">
       {facts.map((f, i) => (
         <div key={f.v} className="transition-all duration-700" style={{ opacity: step >= i + 2 ? 1 : 0.1, transform: step >= i + 2 ? "none" : "translateY(16px)" }}>
           <p className="slide-subtitle" style={{ whiteSpace: "nowrap", fontSize: 54, lineHeight: 1.05 }}>{f.v}</p>
-          <p className="slide-body mt-3 max-w-[290px] opacity-75">{f.l}</p>
+          <p className="slide-body mt-3 max-w-[290px] opacity-90">{f.l}</p>
         </div>
       ))}
     </div>
@@ -124,7 +124,7 @@ export function S14() {
     <div className="absolute top-1/2 left-24 w-[1380px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Till er i rummet</p>
       <h2 className="slide-title-lg anim-rise d1 mt-8">Tillsammans når<br />vi längre</h2>
-      <p className="slide-subtitle anim-rise d3 mt-14 text-bill-teal">Produktutveckling · kampanjer · pressresor · marknadsbearbetning</p>
+      <p className="slide-subtitle anim-rise d3 mt-14 font-semibold text-white">Produktutveckling · kampanjer · pressresor · marknadsbearbetning</p>
       <p className="slide-body-lg anim-fade d5 mt-12 max-w-[1150px] opacity-80">Samarbetet med Turistrådet Västsverige har gett Billingen kompetens och räckvidd som vi inte hade byggt lika starkt på egen hand.</p>
     </div>
   </Slide>;
@@ -146,7 +146,7 @@ export function S15() {
           <span className="absolute top-8 right-8 h-4 w-24 bg-bill-yellow" />
           <p className="slide-kicker text-bill-teal">FIM EnduroGP</p>
           <p className="slide-title mt-4 leading-none whitespace-nowrap">Enduro-VM</p>
-          <p className="slide-body mt-4 opacity-70">Motorcykelenduro i Skövde, 23–25 maj 2025</p>
+          <p className="slide-body mt-4 opacity-95">Motorcykelenduro i Skövde, 23–25 maj 2025</p>
         </div>
         <p className="slide-subtitle mt-6">Enduro-VM 2025</p>
       </div>
@@ -159,16 +159,20 @@ export function S15() {
 export function S15B() {
   return <Slide tone="ink">
     <ActTag act="Akt 3" name="Berättelsen" />
-    <div className="absolute inset-y-0 right-0 overflow-hidden w-[52%]"><Photo src={img.billingetrollet} alt="Billingetrollet i Billingetrollets skog" position="center 40%" /><div className="fade-r-ink absolute inset-0" /></div>
+    <div className="absolute inset-y-0 right-0 w-[58%] overflow-hidden">
+      <Photo src={img.billingetrollet} alt="Billingetrollet i Billingetrollets skog" position="center 40%" className="photo-lift-lg" />
+      {/* Lokal toning endast i skarven vid textytan; slutar långt före trollets ansikte. */}
+      <div className="absolute inset-y-0 left-0 w-[34%]" style={{ background: "linear-gradient(to right, rgba(14,30,31,0.98) 0%, rgba(14,30,31,0.85) 45%, rgba(14,30,31,0.30) 80%, rgba(14,30,31,0) 100%)" }} />
+    </div>
     <div className="absolute top-1/2 left-24 w-[880px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Billingetrollet</p>
       <h2 className="slide-title anim-rise d1 mt-10">En plats behöver också<br />en egen saga</h2>
-      <p className="slide-body anim-fade d3 mt-10 opacity-70">Billingetrollets skog · skogsteater · skogsbio</p>
+      <p className="slide-body anim-fade d3 mt-10 opacity-85">Billingetrollets skog · skogsteater · skogsbio</p>
       <div className="anim-rise d5 mt-14 flex items-end gap-8">
         <span className="slide-title-lg text-bill-teal" style={{fontSize:"132px",lineHeight:1,whiteSpace:"nowrap"}}>2 500</span>
-        <span className="slide-body mb-3 max-w-[380px] opacity-75">besökare på skogsteaterns premiärsäsong 2025</span>
+        <span className="slide-body mb-3 max-w-[380px] opacity-90">besökare på skogsteaterns premiärsäsong 2025</span>
       </div>
-      <p className="slide-source mt-8">Källa: Next Skövde, pressmeddelande 25 augusti 2025.</p>
+      <p className="slide-source mt-8" style={{ opacity: 0.85 }}>Källa: Next Skövde, pressmeddelande 25 augusti 2025.</p>
     </div>
   </Slide>;
 }

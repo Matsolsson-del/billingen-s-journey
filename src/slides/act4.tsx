@@ -5,7 +5,7 @@ export function S16() {
   const p=["Minsta möjliga onödiga miljöpåverkan","Bra för boende och besökare","Fler besökare när det finns plats","Robustare verksamheter och fler heltidsjobb"];
   return <Slide tone="sand">
     <ActTag act="Akt 4" name="Hållbarhetsklivet" />
-    <div className="absolute inset-y-0 right-0 overflow-hidden w-[39%]"><Photo src={img.bergetgruppen} alt="Bergetgruppen arbetar på Billingen" position="center 50%" /></div>
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[39%]"><Photo src={img.bergetgruppen} alt="Bergetgruppen arbetar på Billingen" position="center 50%" className="photo-lift-sm" /></div>
     <div className="absolute top-[170px] left-24 w-[1050px]">
       <p className="slide-kicker text-bill-green">Skaraborgs kandidat 2026</p>
       <h2 className="slide-title anim-rise d1 mt-8">Hållbarhet måste<br />märkas i vardagen</h2>
@@ -20,9 +20,9 @@ export function S17({step=0}:{step?:number}) {
     <ActTag act="Akt 4" name="Resultatet" />
     <div className="absolute top-[250px] right-24 left-24">
       <p className="slide-kicker text-bill-yellow">Kommersiella gästnätter i Skövde</p>
-      <div className="mt-14 flex items-end justify-between gap-12">{years.map((x,i)=><div key={x.y} className="transition-all duration-700" style={{opacity:step>=i?1:.1}}><p className="slide-mega" style={{fontSize:108,whiteSpace:"nowrap"}}>{x.v}</p><p className="slide-subtitle mt-4 opacity-55">{x.y}</p></div>)}</div>
-      <div className="mt-16 border-t border-white/20 pt-10 transition-all duration-700" style={{opacity:step>=3?1:0}}><p className="slide-title-lg text-bill-teal">≈ +20 % på två år</p><p className="slide-body mt-5 opacity-55">Billingen är en av flera motorer i Skövdes utveckling.</p></div>
-      <p className="slide-source mt-10">Källa: SCB/Tillväxtverkets inkvarteringsstatistik, kommersiella gästnätter i Skövde kommun. 2025 är preliminära siffror.</p>
+      <div className="mt-14 flex items-end justify-between gap-12">{years.map((x,i)=><div key={x.y} className="transition-all duration-700" style={{opacity:step>=i?1:.1}}><p className="slide-mega" style={{fontSize:108,whiteSpace:"nowrap"}}>{x.v}</p><p className="slide-subtitle mt-4 opacity-80">{x.y}</p></div>)}</div>
+      <div className="mt-16 border-t border-white/20 pt-10 transition-all duration-700" style={{opacity:step>=3?1:0}}><p className="slide-title-lg text-bill-teal">≈ +20 % på två år</p><p className="slide-body mt-5 opacity-85">Billingen är en av flera motorer i Skövdes utveckling.</p></div>
+      <p className="slide-source mt-10" style={{opacity:.85}}>Källa: SCB/Tillväxtverkets inkvarteringsstatistik, kommersiella gästnätter i Skövde kommun. 2025 är preliminära siffror.</p>
     </div>
   </Slide>;
 }
@@ -33,21 +33,21 @@ export function S18() {
     <div className="absolute top-1/2 right-24 left-24 -translate-y-1/2">
       <p className="slide-kicker text-white/65">Turismkonsumtion i Skövde</p>
       <div className="mt-10 flex items-end gap-12">
-        <div className="anim-rise d1"><p className="slide-mega" style={{fontSize:145,lineHeight:1}}>1,351</p><p className="slide-subtitle mt-3 opacity-70">2023</p></div>
+        <div className="anim-rise d1"><p className="slide-mega" style={{fontSize:145,lineHeight:1}}>1,351</p><p className="slide-subtitle mt-3 opacity-85">2023</p></div>
         <span className="mb-24 text-8xl text-bill-yellow">→</span>
-        <div className="anim-rise d3"><p className="slide-mega text-bill-yellow" style={{fontSize:145,lineHeight:1}}>1,484</p><p className="slide-subtitle mt-3 opacity-70">2025</p></div>
+        <div className="anim-rise d3"><p className="slide-mega text-bill-yellow" style={{fontSize:145,lineHeight:1}}>1,484</p><p className="slide-subtitle mt-3 opacity-85">2025</p></div>
         <p className="slide-subtitle mb-24">miljarder kronor</p>
       </div>
       <p className="slide-body-lg anim-rise d5 mt-14 max-w-[1450px]">Och värdet är större än kronor: folkhälsa, föreningsliv, stolthet och en starkare plats att bo och verka på.</p>
-      <p className="slide-source mt-10">Källa: Tillväxtverkets turismräkenskaper/TEM för Skövde kommun, löpande priser.</p>
+      <p className="slide-source mt-10" style={{opacity:.85}}>Källa: Tillväxtverkets turismräkenskaper/TEM för Skövde kommun, löpande priser.</p>
     </div>
   </Slide>;
 }
 
 export function S19() {
   return <Slide tone="bare">
-    <Photo src={img.hotelroom} alt="Hotellrum i Skövde" />
-    <div className="absolute inset-0 bg-gradient-to-r from-bill-ink/95 via-bill-ink/75 to-bill-ink/30" />
+    <Photo src={img.hotelroom} alt="Hotellrum i Skövde" className="photo-lift" />
+    <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(14,30,31,0.92) 0%, rgba(14,30,31,0.72) 30%, rgba(14,30,31,0.22) 58%, rgba(14,30,31,0.04) 80%, rgba(14,30,31,0) 100%)" }} />
     <ActTag act="Akt 4" name="Nästa nivå" />
     <div className="absolute top-1/2 left-24 w-[1100px] -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Framgång skapar nästa flaskhals</p>
@@ -60,8 +60,8 @@ export function S19() {
 
 export function S20({step=0}:{step?:number}) {
   return <Slide tone="bare">
-    <Photo src={img.winterAerial} alt="Billingen från luften" position="center 55%" />
-    <div className="absolute inset-0 bg-bill-ink/70" />
+    <Photo src={img.winterAerial} alt="Billingen från luften" position="center 55%" className="photo-lift" />
+    <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(14,30,31,0.86) 0%, rgba(14,30,31,0.70) 42%, rgba(14,30,31,0.38) 72%, rgba(14,30,31,0.22) 100%)" }} />
     <img src={img.logo} alt="Billingen Skövde" className="absolute top-20 left-20 h-20 w-auto" />
     <div className="absolute top-1/2 right-24 left-24 -translate-y-1/2">
       <p className="slide-kicker text-bill-yellow">Det vi tar med oss</p>
@@ -76,8 +76,8 @@ export function S20({step=0}:{step?:number}) {
 
 export function S21() {
   return <Slide tone="bare">
-    <Photo src={img.heroSunset} alt="Solnedgång från Billingen" position="center 42%" />
-    <div className="absolute inset-0 bg-gradient-to-t from-bill-ink/95 via-bill-ink/70 to-bill-ink/35" />
+    <Photo src={img.heroSunset} alt="Solnedgång från Billingen" position="center 42%" className="photo-lift" />
+    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(14,30,31,0.86) 0%, rgba(14,30,31,0.55) 40%, rgba(14,30,31,0.22) 75%, rgba(14,30,31,0.10) 100%)" }} />
     <img src={img.logo} alt="Billingen Skövde" className="anim-fade absolute top-20 left-20 h-20 w-auto" />
     <div className="absolute top-1/2 right-24 left-24 -translate-y-1/2 text-center">
       <p className="slide-kicker anim-fade text-bill-yellow">Följ med på resan</p>
