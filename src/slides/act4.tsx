@@ -66,3 +66,26 @@ export function S20({step=0}:{step?:number}) {
     </div>
   </Slide>;
 }
+
+export function S21() {
+  return <Slide tone="bare">
+    <Photo src={img.heroSunset} alt="Solnedgång från Billingen" position="center 42%" />
+    <div className="absolute inset-0 bg-gradient-to-t from-bill-ink/95 via-bill-ink/70 to-bill-ink/35" />
+    <img src={img.logo} alt="Billingen Skövde" className="anim-fade absolute top-20 left-20 h-20 w-auto" />
+    <div className="absolute top-1/2 right-24 left-24 -translate-y-1/2 text-center">
+      <p className="slide-kicker anim-fade text-bill-yellow">Följ med på resan</p>
+      <h2 className="slide-title-lg anim-rise d2 mt-8">Håll kontakt med Billingen</h2>
+      <div className="anim-rise d4 mt-16 flex flex-col items-center gap-8">
+        <a href="https://www.facebook.com/Billingenskovde" target="_blank" rel="noreferrer" className="group flex items-center gap-6 rounded-full bg-white/10 px-10 py-5 backdrop-blur transition hover:bg-white/20">
+          <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073C24 5.403 18.627 0 12 0S0 5.403 0 12.073C0 18.098 4.388 23.03 10.125 23.927v-7.54H7.078v-3.314h3.047V9.794c0-3.037 1.791-4.746 4.533-4.746 1.313 0 2.686.236 2.686.236v3.012h-1.513c-1.491 0-1.956.938-1.956 1.9v2.463h3.336l-.533 3.314h-2.803v7.54C19.612 23.03 24 18.098 24 12.073z"/></svg>
+          <span className="slide-subtitle">@Billingenskovde</span>
+        </a>
+        <a href="https://www.instagram.com/Billingenskovde" target="_blank" rel="noreferrer" className="group flex items-center gap-6 rounded-full bg-white/10 px-10 py-5 backdrop-blur transition hover:bg-white/20">
+          <svg className="h-10 w-10 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.98-6.98.059-1.28.072-1.689.072-4.948 0-3.259-.014-3.667-.072-4.947-.2-4.354-2.617-6.78-6.98-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          <span className="slide-subtitle">@Billingenskovde</span>
+        </a>
+      </div>
+      <p className="slide-body anim-fade d6 mt-16 opacity-70">Mer information på <span className="text-bill-yellow">billingen.se</span></p>
+    </div>
+  </Slide>;
+}
