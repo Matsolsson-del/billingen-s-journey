@@ -21,7 +21,7 @@ export function S01() {
 export function S02() {
   return <Slide tone="deep">
     <ActTag {...A1} />
-    <div className="absolute inset-y-0 right-0 w-[52%]">
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[52%]">
       <Photo src={img.arneMaja} alt="Arne och Maja Sandberg" position="center 28%" />
       <div className="fade-r-deep absolute inset-0" />
     </div>
@@ -73,7 +73,7 @@ export function S04B() {
   ];
   return <Slide tone="sand">
     <ActTag act="Akt 1" name="Grunden" />
-    <div className="absolute inset-y-0 right-0 w-[46%]">
+    <div className="absolute inset-y-0 right-0 overflow-hidden w-[46%]">
       <Photo src={img.lotta} alt="Lotta Stigsdotter" position="center 20%" />
       <div className="fade-r-sand absolute inset-0" />
     </div>
