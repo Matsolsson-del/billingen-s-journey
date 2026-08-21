@@ -21,9 +21,9 @@ export function S01() {
 export function S02() {
   return <Slide tone="deep">
     <ActTag {...A1} />
-    <div className="absolute inset-y-0 right-0 w-[46%]">
+    <div className="absolute inset-y-0 right-0 w-[52%]">
       <Photo src={img.arneMaja} alt="Arne och Maja Sandberg" position="center 28%" />
-      <div className="absolute inset-0 bg-gradient-to-r from-bill-green-deep via-bill-green-deep/20 to-transparent" />
+      <div className="fade-r-deep absolute inset-0" />
     </div>
     <div className="absolute top-1/2 left-24 w-[900px] -translate-y-1/2">
       <p className="slide-mega anim-rise d1 text-bill-yellow" style={{ fontSize: 176 }}>1967</p>
