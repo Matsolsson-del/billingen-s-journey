@@ -22,7 +22,7 @@ export function S12() {
       <Tile src={img.modernBuilding} alt="Billingehus" label="2022 · Lotus tar över" className="anim-rise d2" />
       <Tile src={img.hotelroom} alt="Nya Billingehus" label="2023–2025 · hotell, två spa och kongress" className="anim-rise d3" />
     </div>
-    <div className="absolute right-24 bottom-12 left-24 flex justify-between"><p className="slide-subtitle text-bill-green">Platsen stärker hotellet.</p><p className="slide-subtitle text-bill-green">Hotellet stärker platsen.</p></div>
+    <div className="absolute right-24 bottom-24 left-24 flex justify-between"><p className="slide-subtitle text-bill-green">Platsen stärker hotellet.</p><p className="slide-subtitle text-bill-green">Hotellet stärker platsen.</p></div>
   </Slide>;
 }
 
