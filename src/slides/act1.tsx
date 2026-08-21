@@ -75,7 +75,7 @@ export function S05() {
   </Slide>;
 }
 
-export function S06() {
+export function S05B() {
   return <Slide tone="bare">
     <Photo src={img.naraStaden} alt="Billingen och Skövde från luften med avstånd till Göteborg och Stockholm" position="center 55%" zoom={false} />
     {/* Täcker originalbildens egen rubrik så typografin följer presentationen */}
